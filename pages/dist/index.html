@@ -2,9 +2,82 @@
 <html>
   <head>
     <title>My Site</title>
-    <style>.header {
+    <style>@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.header {
   height: 70px;
-  border-bottom: 1px solid black;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px 140px 0px 140px;
+  font-family: Montserrat;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.class-link {
+  margin-right: 20px;
+}
+
+.vector {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 12.5px;
+}
+
+.button-nav {
+  margin-right: 20px;
+}
+
+.to-come-in {
+  background-color: white;
+  color: #BC9CFF;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 22px;
+  border: 2px solid #BC9CFF;
+  width: 87px;
+  height: 34px;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.register {
+  background-color: #BC9CFF;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 22px;
+  width: 196px;
+  height: 34px;
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.toxin {
+  margin: 28px 0px 28px 0px;
 }
 
 .footer {
@@ -13,7 +86,22 @@
     </style>
   </head>
   <body>
-    <div class="header"></div>
+    <div class="header">
+      <div class="logo"><img class="vector" src=" ../../img/Vector.png" alt="vector"/><img class="toxin" src=" ../../img/TOXIN.png" alt="toxin"/></div>
+      <ul class="navigation"> 
+        <li><a class="class-link">О нас</a></li>
+        <li><a class="class-link">Услуги</a></li>
+        <li><a class="class-link">Вакансии</a></li>
+        <li><a class="class-link">Новости</a></li>
+        <li><a class="class-link">Соглашения</a></li>
+        <li>
+          <button class="button-nav to-come-in"> Войти</button>
+        </li>
+        <li>
+          <button class="button-nav register">Зарегестрироваться</button>
+        </li>
+      </ul>
+    </div>
     <p>Леха лох</p>
     <p class="footer">Рома не лох</p>
   </body>
