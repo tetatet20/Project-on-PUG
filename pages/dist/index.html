@@ -2,9 +2,95 @@
 <html>
   <head>
     <title>My Site</title>
-    <style>.header {
+    <style>@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.header {
   height: 70px;
-  border-bottom: 1px solid black;
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  padding: 0px 140px 0px 140px;
+  font-family: Montserrat;
+  align-items: center;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.class-link {
+  margin-right: 20px;
+  text-decoration: none;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.vector {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 12.5px;
+}
+
+.to-come-in {
+  background-color: white;
+  color: #BC9CFF;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 22px;
+  border: 2px solid #BC9CFF;
+  width: 87px;
+  height: 34px;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.register {
+  background-color: #BC9CFF;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  border-radius: 22px;
+  width: 196px;
+  height: 34px;
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toxin {
+  margin: 28px 0px 28px 0px;
+}
+
+.buttons a:first-child {
+  margin-right: 20px;
 }
 
 .footer {
@@ -13,7 +99,20 @@
     </style>
   </head>
   <body>
-    <div class="header"></div>
+    <div class="header"><a href="#"> <img src=" ../../img/Logo.svg" alt="vector"/></a>
+      <div class="navigation-buttons">  
+        <ul class="navigation"> 
+          <li><a class="class-link" href="#">О нас</a></li>
+          <li><a class="class-link" href="#">Услуги</a></li>
+          <li><a class="class-link" href="#">Вакансии</a></li>
+          <li><a class="class-link" href="#">Новости</a></li>
+          <li><a class="class-link" href="#">Соглашения</a></li>
+        </ul>
+        <div class="buttons"><a href="#">
+            <button class="to-come-in">Войти</button></a><a href="#">
+            <button class="register">Зарегистрироваться </button></a></div>
+      </div>
+    </div>
     <p>Леха лох</p>
     <p class="footer">Рома не лох</p>
   </body>
