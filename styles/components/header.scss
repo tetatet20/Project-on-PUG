@@ -59,7 +59,7 @@ align-items: center;
     font-family: Montserrat;
     font-size: 12px;
     line-height: 15px;
-    margin-right: 20px;
+    cursor: pointer;
     text-transform: uppercase;
 }
 
@@ -79,20 +79,13 @@ align-items: center;
     line-height: 15px;
     text-transform: uppercase;
     align-items: center;
+    cursor: pointer;
 }
 
 .toxin {
     margin:28px 0px 28px 0px
 }
-.register a{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
 
-.to-come-in a{
-    display:block;
-    color: #BC9CFF;
-    text-decoration: none;
-    font-weight: bold;
+.buttons a:first-child {
+    margin-right: 20px;
 }

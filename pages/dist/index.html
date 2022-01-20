@@ -62,7 +62,7 @@ li {
   font-family: Montserrat;
   font-size: 12px;
   line-height: 15px;
-  margin-right: 20px;
+  cursor: pointer;
   text-transform: uppercase;
 }
 
@@ -82,23 +82,15 @@ li {
   line-height: 15px;
   text-transform: uppercase;
   align-items: center;
+  cursor: pointer;
 }
 
 .toxin {
   margin: 28px 0px 28px 0px;
 }
 
-.register a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.to-come-in a {
-  display: block;
-  color: #BC9CFF;
-  text-decoration: none;
-  font-weight: bold;
+.buttons a:first-child {
+  margin-right: 20px;
 }
 
 .footer {
@@ -116,14 +108,9 @@ li {
           <li><a class="class-link" href="#">Новости</a></li>
           <li><a class="class-link" href="#">Соглашения</a></li>
         </ul>
-        <div class="buttons">
-          <li>
-            <button class="to-come-in"><a href="#">Войти</a></button>
-          </li>
-          <li>
-            <button class="register"><a href="#">Зарегистрироваться </a></button>
-          </li>
-        </div>
+        <div class="buttons"><a href="#">
+            <button class="to-come-in">Войти</button></a><a href="#">
+            <button class="register">Зарегистрироваться </button></a></div>
       </div>
     </div>
     <p>Леха лох</p>
