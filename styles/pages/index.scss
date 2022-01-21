@@ -17,3 +17,10 @@ ul {
 p {
     margin: 0px;
 }
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 140px;
+    box-sizing: border-box;
+}
