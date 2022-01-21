@@ -2,7 +2,7 @@
 
 .header {
     height: 70px;
-    max-width:1440px;
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     margin: 0px;
@@ -23,23 +23,40 @@ li {
 }
 
 .buttons {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .navigation-buttons {
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 
 .class-link {
     margin-right: 20px;
     text-decoration: none;
-    color:rgba(31, 32, 65, 0.5);
+    color: rgba(31, 32, 65, 0.5);
+}
+
+.dropdown {
+    position: relative;
+    margin-right: 30px;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-bottom: 2px solid black;
+        border-left: 2px solid black;
+        transform: rotate(315deg);
+        right: -17px;
+        top: 4px;
+    }
 }
 
 .vector {
-    margin-top:15px;
+    margin-top: 15px;
     margin-bottom: 15px;
     margin-right: 12.5px;
 }
@@ -82,7 +99,7 @@ align-items: center;
 }
 
 .toxin {
-    margin:28px 0px 28px 0px
+    margin: 28px 0px 28px 0px
 }
 
 .buttons a:first-child {

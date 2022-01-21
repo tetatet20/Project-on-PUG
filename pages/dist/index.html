@@ -41,6 +41,22 @@ li {
   color: rgba(31, 32, 65, 0.5);
 }
 
+.dropdown {
+  position: relative;
+  margin-right: 30px;
+}
+.dropdown::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  transform: rotate(315deg);
+  right: -17px;
+  top: 4px;
+}
+
 .vector {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -104,7 +120,7 @@ li {
   position: relative;
 }
 
-.nav-footer li {
+.nav-footer li:not(:last-child) {
   margin-bottom: 20px;
 }
 
@@ -244,8 +260,8 @@ p {
         <div class="navigation-buttons">  
           <ul class="navigation"> 
             <li><a class="class-link" href="#">О нас</a></li>
-            <li><a class="class-link" href="#">Услуги</a></li>
-            <li><a class="class-link" href="#">Вакансии</a></li>
+            <li><a class="class-link dropdown" href="#">Услуги</a></li>
+            <li><a class="class-link dropdown" href="#">Вакансии</a></li>
             <li><a class="class-link" href="#">Новости</a></li>
             <li><a class="class-link" href="#">Соглашения</a></li>
           </ul>
