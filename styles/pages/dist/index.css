@@ -39,18 +39,18 @@ li {
 
 .dropdown {
   position: relative;
-  margin-right: 30px;
+  margin-right: 40px;
 }
 .dropdown::after {
   position: absolute;
   content: "";
   width: 6px;
   height: 6px;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.5);
   transform: rotate(315deg);
   right: -17px;
-  top: 4px;
+  top: 3px;
 }
 
 .vector {
@@ -97,7 +97,7 @@ li {
 }
 
 .toxin {
-  margin: 28px 0px 28px 0px;
+  margin: 28px 0;
 }
 
 .buttons a:first-child {
@@ -112,8 +112,7 @@ li {
 .nav-footer {
   display: flex;
   justify-content: space-between;
-  padding: 100px 0px 80px 0px;
-  position: relative;
+  padding: 100px 0;
 }
 
 .nav-footer li:not(:last-child) {
@@ -122,6 +121,10 @@ li {
 
 .logo-footer {
   padding-left: 0px;
+}
+
+.logo-footer img {
+  margin-bottom: 20px;
 }
 
 .navigation-footer {
@@ -187,10 +190,15 @@ li {
   box-sizing: border-box;
 }
 
+.subscription-margin {
+  margin-bottom: 20px;
+  position: relative;
+}
+
 .arrow-forward {
   position: absolute;
-  right: 152px;
-  top: 221px;
+  right: 20px;
+  top: 13px;
 }
 
 .footer-bottom {
@@ -210,7 +218,7 @@ li {
 .socialnetwork {
   display: flex;
   justify-content: space-between;
-  padding: 23px 0px 23px 0px;
+  padding: 23px 0;
 }
 
 .footer-bottom a {
@@ -222,7 +230,7 @@ li {
 }
 
 .footer-bottom p {
-  margin: 26px 0px 26px 0px;
+  margin: 26px 0;
 }
 
 li {

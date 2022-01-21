@@ -6,8 +6,7 @@
 .nav-footer {
     display: flex;
     justify-content: space-between;
-    padding: 100px 0px 80px 0px;
-    position: relative;
+    padding: 100px 0;
 }
 
 .nav-footer li:not(:last-child) {
@@ -16,6 +15,10 @@
     
 .logo-footer {
 padding-left: 0px;
+}
+
+.logo-footer img {
+    margin-bottom: 20px;
 }
 
 .navigation-footer {
@@ -82,10 +85,15 @@ padding-left: 51px;
     
 }
 
+.subscription-margin {
+    margin-bottom: 20px;
+    position: relative;
+}
+
 .arrow-forward {
     position: absolute;
-    right: 152px;
-    top:221px;
+    right: 20px;
+    top:13px;
 }
 
 .footer-bottom {
@@ -106,7 +114,7 @@ padding-left: 51px;
 .socialnetwork {
     display: flex;
     justify-content: space-between;
-    padding:23px 0px 23px 0px;
+    padding:23px 0;
 }
 
 .footer-bottom a {
@@ -118,5 +126,5 @@ margin-right: 20px;
 }
 
 .footer-bottom p {
-    margin:26px 0px 26px 0px;
+    margin:26px 0;
 }
