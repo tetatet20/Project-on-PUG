@@ -9,7 +9,6 @@
   display: flex;
   justify-content: space-between;
   margin: 0px;
-  padding: 0px 140px 0px 140px;
   font-family: Montserrat;
   align-items: center;
   font-size: 14px;
@@ -40,6 +39,22 @@ li {
   margin-right: 20px;
   text-decoration: none;
   color: rgba(31, 32, 65, 0.5);
+}
+
+.dropdown {
+  position: relative;
+  margin-right: 40px;
+}
+.dropdown::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(315deg);
+  right: -17px;
+  top: 3px;
 }
 
 .vector {
@@ -86,7 +101,7 @@ li {
 }
 
 .toxin {
-  margin: 28px 0px 28px 0px;
+  margin: 28px 0;
 }
 
 .buttons a:first-child {
@@ -94,26 +109,217 @@ li {
 }
 
 .footer {
-  color: red;
+  font-family: Montserrat;
+  width: 100%;
+}
+
+.nav-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0;
+}
+
+.nav-footer li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.logo-footer {
+  padding-left: 0px;
+}
+
+.logo-footer img {
+  margin-bottom: 20px;
+}
+
+.navigation-footer {
+  padding-left: 45px;
+  white-space: nowrap;
+}
+
+.about-us {
+  padding-left: 57px;
+  white-space: nowrap;
+}
+
+.support-service {
+  padding-left: 92px;
+  white-space: nowrap;
+}
+
+.subscription {
+  padding-left: 51px;
+}
+
+.logo-footer p {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.bold-nav-footer {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.color-monserat {
+  color: rgba(31, 32, 65, 0.5);
+  line-height: 17px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.logo-footer p {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  font-weight: 400;
+}
+
+.subscription p {
+  line-height: 24px;
+}
+
+.email {
+  width: 260px;
+  height: 44px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  font-family: Montserrat;
+  padding-left: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.subscription-margin {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.arrow-forward {
+  position: absolute;
+  right: 20px;
+  top: 13px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.footer-bottom::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 1440px;
+  left: -140px;
+  background-color: rgba(31, 32, 65, 0.25);
+}
+
+.socialnetwork {
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 0;
+}
+
+.footer-bottom a {
+  margin-right: 20px;
+}
+
+.footer-bottom a:last-child {
+  margin-right: 0px;
+}
+
+.footer-bottom p {
+  margin: 26px 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 140px;
+  box-sizing: border-box;
 }
     </style>
   </head>
   <body>
-    <div class="header"><a href="#"> <img src=" ../../img/Logo.svg" alt="vector"/></a>
-      <div class="navigation-buttons">  
-        <ul class="navigation"> 
-          <li><a class="class-link" href="#">О нас</a></li>
-          <li><a class="class-link" href="#">Услуги</a></li>
-          <li><a class="class-link" href="#">Вакансии</a></li>
-          <li><a class="class-link" href="#">Новости</a></li>
-          <li><a class="class-link" href="#">Соглашения</a></li>
-        </ul>
-        <div class="buttons"><a href="#">
-            <button class="to-come-in">Войти</button></a><a href="#">
-            <button class="register">Зарегистрироваться </button></a></div>
+    <div class="container">
+      <div class="header"><a href="#"> <img src=" ../../img/Logo.svg" alt="vector"/></a>
+        <div class="navigation-buttons">  
+          <ul class="navigation"> 
+            <li><a class="class-link" href="#">О нас</a></li>
+            <li><a class="class-link dropdown" href="#">Услуги</a></li>
+            <li><a class="class-link" href="#">Вакансии</a></li>
+            <li><a class="class-link" href="#">Новости</a></li>
+            <li><a class="class-link dropdown" href="#">Соглашения</a></li>
+          </ul>
+          <div class="buttons"><a href="#">
+              <button class="to-come-in">Войти</button></a><a href="#">
+              <button class="register">Зарегистрироваться </button></a></div>
+        </div>
+      </div>
+      <p>Леха лох</p>
+      <div class="footer"> 
+        <div class="nav-footer">
+          <div class="logo-footer"> <a href="#"><img src=" ../../img/Logo.svg" alt="vector"/></a>
+            <p>Бронирование номеров в лучшем <br> отеле 2019 года по версии <br> ассоциации «Отельные взгляды»</p>
+          </div>
+          <ul class="navigation-footer"> 
+            <li class="bold-nav-footer">Навигация</li>
+            <li><a class="color-monserat" href="#">О нас</a></li>
+            <li><a class="color-monserat" href="#">Новости</a></li>
+            <li><a class="color-monserat" href="#">Служба поддержки</a></li>
+            <li><a class="color-monserat" href="#">Услуги</a></li>
+          </ul>
+          <ul class="about-us">
+            <li class="bold-nav-footer">О нас</li>
+            <li><a class="color-monserat" href="#">О сервисе</a></li>
+            <li><a class="color-monserat" href="#">Наша команда</a></li>
+            <li><a class="color-monserat" href="#">Вакансии</a></li>
+            <li><a class="color-monserat" href="#">Инвесторы</a></li>
+          </ul>
+          <ul class="support-service">
+            <li class="bold-nav-footer">Служба поддержки</li>
+            <li><a class="color-monserat" href="#">Соглашения</a></li>
+            <li><a class="color-monserat" href="#">Сообщества</a></li>
+            <li><a class="color-monserat" href="#">Связь с нами</a></li>
+          </ul>
+          <div class="subscription">
+            <div class="bold-nav-footer subscription-margin">Подписка</div>
+            <div class="color-monserat">
+              <p class="subscription-margin">Получайте специальные<br>предложения и новости сервис</p>
+            </div>
+            <div class="subscription-margin">
+              <input class="email" type="email" placeholder="Email"/>
+              <input class="arrow-forward" type="image" src=" ../../img/arrow_forward.svg" alt="arrow_forward"/>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p class="color-monserat">Copyright © 2018 Toxin отель. Все права защищены.</p>
+          <div class="socialnetwork"><a href="https://twitter.com"><img src=" ../../img/twitter.svg" alt="twitter"/></a><a href="https://facebook.com"><img src=" ../../img/facebook.svg" alt="facebook"/></a><a href="https://instagram.com"><img src=" ../../img/insta.svg" alt="insta"/></a></div>
+        </div>
       </div>
     </div>
-    <p>Леха лох</p>
-    <p class="footer">Рома не лох</p>
   </body>
 </html>
