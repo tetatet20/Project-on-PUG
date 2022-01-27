@@ -3,6 +3,18 @@ extends ../layout/default.pug
 block styles
     style
       include ../styles/pages/dist/index.css
-      
+
 block content
-    p Леха лох
+  .content
+    .number-selection
+      p Найдем номера под<br>ваши пожелания
+      .flex-calendar
+        label.dropdown-calendar Прибытие
+          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
+        label.dropdown-calendar Выезд
+          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
+      label.guests Гости
+        input.guests-input(type="text" placeholder="Сколько гостей")
+      .div-selection
+        button.selection Подобрать номер
+    p.caption Лучшие номера для вашей работы,<br>отдыха и просто вдохновения
