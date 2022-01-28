@@ -11,12 +11,28 @@ a {
 }
 
 ul {
-    margin:0px;
+    margin: 0px;
     padding: 0px;
 }
 
 p {
     margin: 0px;
+}
+
+$grey-50: rgba(31, 32, 65, .5);
+$grey-25: rgba(31, 32, 65, .25);
+
+@mixin arrow {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid $grey-50;
+    // TODO переделать на переменную которую написал сверху и посмотреть снизу и заменить
+    border-left: 2px solid rgba(31, 32, 65, 0.5);
+    transform: rotate(315deg);
+    right: 15px;
+    top: 37px;
 }
 
 .container {
@@ -69,7 +85,8 @@ p {
 .arrival-departure {
     width: 150px;
     height: 44px;
-    border:1px solid rgba(31, 32, 65, 0.25);
+    // тут все цвета с 25 заменить
+    border: 1px solid $grey-25;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: Montserrat;
@@ -98,18 +115,11 @@ p {
     color: #1F2041;
 
     &::after {
-        position: absolute;
-        content: "";
-        width: 6px;
-        height: 6px;
-        border-bottom: 2px solid rgba(31, 32, 65, 0.5);
-        border-left: 2px solid rgba(31, 32, 65, 0.5);
-        transform: rotate(315deg);
-        right: 15px;
-        top: 37px;
-        
+        // Тут и ниже повторяется код. Я создал миксин и использовал его сдесь. После компиляции можешь посмотреть что тут получается. Вставь для следующего after также
+        @include arrow();
     }
 }
+
 .dropdown-calendar:first-child {
     margin-right: 20px;
 }
@@ -133,14 +143,14 @@ p {
         transform: rotate(315deg);
         right: 15px;
         top: 37px;
-        
+
     }
 }
 
 .guests-input {
     width: 320px;
     height: 44px;
-    border:1px solid rgba(31, 32, 65, 0.25);
+    border: 1px solid rgba(31, 32, 65, 0.25);
     border-radius: 4px;
     box-sizing: border-box;
     font-family: Montserrat;
@@ -165,20 +175,21 @@ p {
     text-transform: uppercase;
     align-items: center;
     cursor: pointer;
-    margin-top:31px;
+    margin-top: 31px;
     letter-spacing: 1;
 }
+
 .div-selection {
     position: relative;
-    
+
     &::after {
-    position: absolute;
-    content: url('../../img/arrow_forward_white.svg');
-    width: 44px;
-    height: 44px;
-    transform: rotate(360deg);
-    right: -15px;
-    top: 43px;
-    cursor: pointer;
+        position: absolute;
+        content: url('../../img/arrow_forward_white.svg');
+        width: 44px;
+        height: 44px;
+        transform: rotate(360deg);
+        right: -15px;
+        top: 43px;
+        cursor: pointer;
     }
 }
