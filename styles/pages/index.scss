@@ -60,12 +60,6 @@ p {
     color: rgba(31, 32, 65, 0.75);
 }
 
-.flex-calendar {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
 .arrival-departure {
     width: 150px;
     height: 44px;
@@ -75,6 +69,12 @@ p {
     font-family: Montserrat;
     padding: 8px 0px 8px 15px;
     margin-top: 5px;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
 }
 
 .number-selection p {
@@ -135,17 +135,16 @@ p {
         top: 37px;
         
     }
-}
-
-.guests-input {
-    width: 320px;
-    height: 44px;
-    border:1px solid rgba(31, 32, 65, 0.25);
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: Montserrat;
-    padding: 13px 193px 13px 15px;
-    margin-top: 5px;
+    &-input {
+        width: 320px;
+        height: 44px;
+        border:1px solid rgba(31, 32, 65, 0.25);
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: Montserrat;
+        padding: 13px 193px 13px 15px;
+        margin-top: 5px;
+    }
 }
 
 .selection {
@@ -167,8 +166,6 @@ p {
     cursor: pointer;
     margin-top:31px;
     letter-spacing: 1;
-}
-.div-selection {
     position: relative;
     
     &::after {
@@ -177,8 +174,8 @@ p {
     width: 44px;
     height: 44px;
     transform: rotate(360deg);
-    right: -15px;
-    top: 43px;
+    right: 0;
+    top: 13px;
     cursor: pointer;
     }
 }
