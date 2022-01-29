@@ -84,7 +84,7 @@ li {
 }
 
 .register {
-  background-color: #BC9CFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   color: white;
   text-align: center;
   display: inline-block;
@@ -100,6 +100,7 @@ li {
   text-transform: uppercase;
   align-items: center;
   cursor: pointer;
+  letter-spacing: 0.5;
 }
 
 .toxin {
@@ -383,7 +384,7 @@ p {
 }
 
 .selection {
-  background-color: #BC9CFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   color: white;
   text-align: center;
   display: inline-block;
@@ -443,7 +444,7 @@ p {
             </label>
           </div>
           <label class="guests">Гости
-            <input class="guests-input" type="text" placeholder="Сколько гостей"/>
+            <input class="guests-input" type="text" placeholder="Сколько гостей"/><span>+</span><span>2</span><span>-</span>
             <button class="selection">Подобрать номер</button>
           </label>
         </div>

@@ -80,7 +80,7 @@ li {
 }
 
 .register {
-  background-color: #BC9CFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   color: white;
   text-align: center;
   display: inline-block;
@@ -96,6 +96,7 @@ li {
   text-transform: uppercase;
   align-items: center;
   cursor: pointer;
+  letter-spacing: 0.5;
 }
 
 .toxin {
@@ -379,7 +380,7 @@ p {
 }
 
 .selection {
-  background-color: #BC9CFF;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   color: white;
   text-align: center;
   display: inline-block;
