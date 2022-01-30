@@ -2,6 +2,15 @@
 @import "../components/footer.scss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+
+button {
+    padding: 0;
+    border: none;
+     font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
 li {
     list-style-type: none;
 }
@@ -176,4 +185,57 @@ $grey-25: rgba(31, 32, 65, .25);
         top: 13px;
         cursor: pointer;
     }
+}
+
+.dropdown-menu {
+    max-width: 320px;
+    max-height: 159px;
+    background-color: white;
+    text-align: left;
+    padding: 13px 10px 13px 15px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    border:1px solid $grey-50;
+    border-radius: 2px;
+}
+
+.dropdown-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 92px;
+    align-items: center;
+}
+
+.age {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    align-items: center;
+}   
+
+.clean-apply {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 19px;
+
+    &-button {
+        color: #BC9CFF;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+}
+
+.round-button {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 22px;
+    border: 1px solid $grey-25;
+    flex-shrink: 0;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 6px 6px;
 }

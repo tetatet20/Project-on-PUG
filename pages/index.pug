@@ -15,8 +15,24 @@ block content
           input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
       label.guests Гости
         input.guests-input(type="text" placeholder="Сколько гостей")
-        span +
-        span 2
-        span -
+        .dropdown-menu
+          .age Взрослые
+            .dropdown-buttons    
+              span.round-button -
+              span 2
+              span.round-button +
+          .age Дети
+            .dropdown-buttons  
+              span.round-button -
+              span 1
+              span.round-button +
+          .age Младенцы
+            .dropdown-buttons
+              span.round-button -
+              span 0
+              span.round-button +
+          .clean-apply
+            button.clean-apply-button Очистить
+            button.clean-apply-button Применить
         button.selection Подобрать номер
     p.caption Лучшие номера для вашей работы,<br>отдыха и просто вдохновения
