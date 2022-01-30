@@ -188,8 +188,13 @@ $grey-25: rgba(31, 32, 65, .25);
 }
 
 .dropdown-menu {
-    max-width: 320px;
-    max-height: 159px;
+    z-index: 2;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    display: none;
+    width: 320px;
+    height: 160px;
     background-color: white;
     text-align: left;
     padding: 13px 10px 13px 15px;
@@ -199,6 +204,11 @@ $grey-25: rgba(31, 32, 65, .25);
     line-height: 15px;
     border:1px solid $grey-50;
     border-radius: 2px;
+    box-sizing: border-box;
+
+    &-show {
+        display: block;
+     }
 }
 
 .dropdown-buttons {
@@ -228,6 +238,7 @@ $grey-25: rgba(31, 32, 65, .25);
 }
 
 .round-button {
+    color:$grey-50;
     display: inline-block;
     width: 30px;
     height: 30px;

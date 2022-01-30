@@ -424,8 +424,13 @@ p {
 }
 
 .dropdown-menu {
-  max-width: 320px;
-  max-height: 159px;
+  z-index: 2;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  display: none;
+  width: 320px;
+  height: 160px;
   background-color: white;
   text-align: left;
   padding: 13px 10px 13px 15px;
@@ -435,6 +440,10 @@ p {
   line-height: 15px;
   border: 1px solid rgba(31, 32, 65, 0.5);
   border-radius: 2px;
+  box-sizing: border-box;
+}
+.dropdown-menu-show {
+  display: block;
 }
 
 .dropdown-buttons {
@@ -463,6 +472,7 @@ p {
 }
 
 .round-button {
+  color: rgba(31, 32, 65, 0.5);
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -475,6 +485,7 @@ p {
   padding: 6px 6px;
 }
     </style>
+    <script src="./scripts/index.js"></script>
   </head>
   <body>
     <div class="container">
@@ -505,7 +516,7 @@ p {
           </div>
           <label class="guests">Гости
             <input class="guests-input" type="text" placeholder="Сколько гостей"/>
-            <div class="dropdown-menu">
+            <div class="dropdown-menu dropdown-menu-show">
               <div class="age">Взрослые
                 <div class="dropdown-buttons">   <span class="round-button">-</span><span>2</span><span class="round-button">+</span></div>
               </div>

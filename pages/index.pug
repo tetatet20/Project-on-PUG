@@ -4,6 +4,9 @@ block styles
     style
       include ../styles/pages/dist/index.css
 
+block scripts 
+  script(src='./scripts/index.js')
+
 block content
   .content
     .number-selection
@@ -15,7 +18,7 @@ block content
           input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
       label.guests Гости
         input.guests-input(type="text" placeholder="Сколько гостей")
-        .dropdown-menu
+        .dropdown-menu.dropdown-menu-show
           .age Взрослые
             .dropdown-buttons    
               span.round-button -
@@ -36,3 +39,4 @@ block content
             button.clean-apply-button Применить
         button.selection Подобрать номер
     p.caption Лучшие номера для вашей работы,<br>отдыха и просто вдохновения
+  
