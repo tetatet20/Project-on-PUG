@@ -3,6 +3,40 @@ extends ../layout/default.pug
 block styles
     style
       include ../styles/pages/dist/index.css
-      
+
+block scripts 
+  script(src='../scripts/index.js')
+
 block content
-    p Леха лох
+  .content
+    .number-selection
+      p Найдем номера под<br>ваши пожелания
+      .arrival-departure-container
+        label.dropdown-calendar Прибытие
+          input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")
+        label.dropdown-calendar Выезд
+          input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")
+      label.guests Гости
+        input.guests-input(type="text" value="Сколько гостей")
+        .dropdown-menu
+          .age Взрослые
+            .dropdown-buttons    
+              span.round-button.adults-minus -
+              span.adults-number 0
+              span.round-button.adults-plus +
+          .age Дети
+            .dropdown-buttons  
+              span.round-button.children-minus -
+              span.children-number 0
+              span.round-button.children-plus +
+          .age Младенцы
+            .dropdown-buttons
+              span.round-button.babies-minus -
+              span.babies-number 0
+              span.round-button.babies-plus +
+          .clean-apply
+            button.clean-apply-button.clean Очистить
+            button.clean-apply-button.apply Применить
+        button.selection Подобрать номер
+    p.caption Лучшие номера для вашей работы,<br>отдыха и просто вдохновения
+  
