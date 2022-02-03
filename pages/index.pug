@@ -13,30 +13,30 @@ block content
       p Найдем номера под<br>ваши пожелания
       .arrival-departure-container
         label.dropdown-calendar Прибытие
-          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
+          input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")
         label.dropdown-calendar Выезд
-          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
+          input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")
       label.guests Гости
-        input.guests-input(type="text" placeholder="Сколько гостей")
+        input.guests-input(type="text" value="Сколько гостей")
         .dropdown-menu
           .age Взрослые
             .dropdown-buttons    
-              span.round-button -
-              span 2
-              span.round-button +
+              span.round-button.adults-minus -
+              span.adults-number 0
+              span.round-button.adults-plus +
           .age Дети
             .dropdown-buttons  
-              span.round-button -
-              span 1
-              span.round-button +
+              span.round-button.children-minus -
+              span.children-number 0
+              span.round-button.children-plus +
           .age Младенцы
             .dropdown-buttons
-              span.round-button -
-              span 0
-              span.round-button +
+              span.round-button.babies-minus -
+              span.babies-number 0
+              span.round-button.babies-plus +
           .clean-apply
-            button.clean-apply-button Очистить
-            button.clean-apply-button Применить
+            button.clean-apply-button.clean Очистить
+            button.clean-apply-button.apply Применить
         button.selection Подобрать номер
     p.caption Лучшие номера для вашей работы,<br>отдыха и просто вдохновения
   

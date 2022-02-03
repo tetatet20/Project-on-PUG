@@ -424,7 +424,6 @@ p {
   position: absolute;
   bottom: -100px;
   left: 0;
-  display: none;
   width: 320px;
   height: 160px;
   background-color: white;
@@ -479,4 +478,5 @@ p {
   text-align: center;
   box-sizing: border-box;
   padding: 6px 6px;
+  cursor: pointer;
 }

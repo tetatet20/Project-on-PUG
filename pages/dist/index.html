@@ -428,7 +428,6 @@ p {
   position: absolute;
   bottom: -100px;
   left: 0;
-  display: none;
   width: 320px;
   height: 160px;
   background-color: white;
@@ -483,6 +482,7 @@ p {
   text-align: center;
   box-sizing: border-box;
   padding: 6px 6px;
+  cursor: pointer;
 }
     </style>
   </head>
@@ -507,27 +507,27 @@ p {
           <p>Найдем номера под<br>ваши пожелания</p>
           <div class="arrival-departure-container">
             <label class="dropdown-calendar">Прибытие
-              <input class="arrival-departure" type="text" placeholder="ДД.ММ.ГГГГ"/>
+              <input class="arrival-departure" type="text" value="ДД.ММ.ГГГГ"/>
             </label>
             <label class="dropdown-calendar">Выезд
-              <input class="arrival-departure" type="text" placeholder="ДД.ММ.ГГГГ"/>
+              <input class="arrival-departure" type="text" value="ДД.ММ.ГГГГ"/>
             </label>
           </div>
           <label class="guests">Гости
-            <input class="guests-input" type="text" placeholder="Сколько гостей"/>
+            <input class="guests-input" type="text" value="Сколько гостей"/>
             <div class="dropdown-menu">
               <div class="age">Взрослые
-                <div class="dropdown-buttons">   <span class="round-button">-</span><span>2</span><span class="round-button">+</span></div>
+                <div class="dropdown-buttons">   <span class="round-button adults-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus">+</span></div>
               </div>
               <div class="age">Дети
-                <div class="dropdown-buttons"> <span class="round-button">-</span><span>1</span><span class="round-button">+</span></div>
+                <div class="dropdown-buttons"> <span class="round-button children-minus">-</span><span class="children-number">0</span><span class="round-button children-plus">+</span></div>
               </div>
               <div class="age">Младенцы
-                <div class="dropdown-buttons"><span class="round-button">-</span><span>0</span><span class="round-button">+</span></div>
+                <div class="dropdown-buttons"><span class="round-button babies-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus">+</span></div>
               </div>
               <div class="clean-apply">
-                <button class="clean-apply-button">Очистить</button>
-                <button class="clean-apply-button">Применить</button>
+                <button class="clean-apply-button clean">Очистить</button>
+                <button class="clean-apply-button apply">Применить</button>
               </div>
             </div>
             <button class="selection">Подобрать номер</button>
