@@ -368,6 +368,12 @@ p {
   line-height: 15px;
   text-transform: uppercase;
   color: #1F2041;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .guests::after {
   position: absolute;
@@ -390,6 +396,12 @@ p {
   padding: 13px 193px 13px 15px;
   margin-top: 5px;
   cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .guests-input:focus {
   outline: none;
@@ -522,7 +534,7 @@ p {
             <input class="guests-input" type="text" value="Сколько гостей" readonly="readonly"/>
             <div class="dropdown-menu">
               <div class="age">Взрослые
-                <div class="dropdown-buttons">   <span class="round-button adults-minus" data-button="adult-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="adult-plus">+</span></div>
+                <div class="dropdown-buttons"><span class="round-button adults-minus" data-button="adult-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="adult-plus">+</span></div>
               </div>
               <div class="age">Дети
                 <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="childrens-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="childrens-plus">+</span></div>
@@ -534,8 +546,8 @@ p {
                 <button class="clean-apply-button clean">Очистить</button>
                 <button class="clean-apply-button apply">Применить</button>
               </div>
-            </div>
-            <button class="selection">Подобрать номер</button>
+            </div><a href="#">
+              <button class="selection">Подобрать номер</button></a>
           </label>
         </div>
         <p class="caption">Лучшие номера для вашей работы,<br>отдыха и просто вдохновения</p>
