@@ -389,6 +389,10 @@ p {
   font-family: Montserrat;
   padding: 13px 193px 13px 15px;
   margin-top: 5px;
+  cursor: pointer;
+}
+.guests-input:focus {
+  outline: none;
 }
 
 .selection {
@@ -428,6 +432,7 @@ p {
   position: absolute;
   bottom: -100px;
   left: 0;
+  display: none;
   width: 320px;
   height: 160px;
   background-color: white;
@@ -514,16 +519,16 @@ p {
             </label>
           </div>
           <label class="guests">Гости
-            <input class="guests-input" type="text" value="Сколько гостей"/>
+            <input class="guests-input" type="text" value="Сколько гостей" readonly="readonly"/>
             <div class="dropdown-menu">
               <div class="age">Взрослые
-                <div class="dropdown-buttons">   <span class="round-button adults-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus">+</span></div>
+                <div class="dropdown-buttons">   <span class="round-button adults-minus" data-button="adult-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="adult-plus">+</span></div>
               </div>
               <div class="age">Дети
-                <div class="dropdown-buttons"> <span class="round-button children-minus">-</span><span class="children-number">0</span><span class="round-button children-plus">+</span></div>
+                <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="childrens-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="childrens-plus">+</span></div>
               </div>
               <div class="age">Младенцы
-                <div class="dropdown-buttons"><span class="round-button babies-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus">+</span></div>
+                <div class="dropdown-buttons"><span class="round-button babies-minus" data-button="babies-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus" data-button="babies-plus">+</span></div>
               </div>
               <div class="clean-apply">
                 <button class="clean-apply-button clean">Очистить</button>

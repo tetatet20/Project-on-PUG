@@ -6,7 +6,7 @@
 button {
     padding: 0;
     border: none;
-     font: inherit;
+    font: inherit;
     color: inherit;
     background-color: transparent;
 }
@@ -142,15 +142,21 @@ $grey-25: rgba(31, 32, 65, .25);
     &::after {
         @include arrow();
     }
+
     &-input {
         width: 320px;
         height: 44px;
-        border:1px solid $grey-25;
+        border: 1px solid $grey-25;
         border-radius: 4px;
         box-sizing: border-box;
         font-family: Montserrat;
         padding: 13px 193px 13px 15px;
         margin-top: 5px;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
     }
 }
 
@@ -192,7 +198,7 @@ $grey-25: rgba(31, 32, 65, .25);
     position: absolute;
     bottom: -100px;
     left: 0;
-    // display: none;
+    display: none;
     width: 320px;
     height: 160px;
     background-color: white;
@@ -202,7 +208,7 @@ $grey-25: rgba(31, 32, 65, .25);
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
-    border:1px solid $grey-50;
+    border: 1px solid $grey-50;
     border-radius: 2px;
     box-sizing: border-box;
 
@@ -223,7 +229,7 @@ $grey-25: rgba(31, 32, 65, .25);
     justify-content: space-between;
     margin-bottom: 7px;
     align-items: center;
-}   
+}
 
 .clean-apply {
     display: flex;
@@ -238,7 +244,7 @@ $grey-25: rgba(31, 32, 65, .25);
 }
 
 .round-button {
-    color:$grey-50;
+    color: $grey-50;
     display: inline-block;
     width: 30px;
     height: 30px;

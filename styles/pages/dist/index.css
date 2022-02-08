@@ -385,6 +385,10 @@ p {
   font-family: Montserrat;
   padding: 13px 193px 13px 15px;
   margin-top: 5px;
+  cursor: pointer;
+}
+.guests-input:focus {
+  outline: none;
 }
 
 .selection {
@@ -424,6 +428,7 @@ p {
   position: absolute;
   bottom: -100px;
   left: 0;
+  display: none;
   width: 320px;
   height: 160px;
   background-color: white;
