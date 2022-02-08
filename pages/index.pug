@@ -17,26 +17,27 @@ block content
         label.dropdown-calendar Выезд
           input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")
       label.guests Гости
-        input.guests-input(type="text" value="Сколько гостей")
+        input.guests-input(type="text" value="Сколько гостей" readonly)
         .dropdown-menu
           .age Взрослые
-            .dropdown-buttons    
-              span.round-button.adults-minus -
+            .dropdown-buttons
+              span.round-button.adults-minus(data-button="adult-minus") -
               span.adults-number 0
-              span.round-button.adults-plus +
+              span.round-button.adults-plus(data-button="adult-plus") +
           .age Дети
             .dropdown-buttons  
-              span.round-button.children-minus -
+              span.round-button.children-minus(data-button="childrens-minus") -
               span.children-number 0
-              span.round-button.children-plus +
+              span.round-button.children-plus(data-button="childrens-plus") +
           .age Младенцы
             .dropdown-buttons
-              span.round-button.babies-minus -
+              span.round-button.babies-minus(data-button="babies-minus") -
               span.babies-number 0
-              span.round-button.babies-plus +
+              span.round-button.babies-plus(data-button="babies-plus") +
           .clean-apply
             button.clean-apply-button.clean Очистить
             button.clean-apply-button.apply Применить
-        button.selection Подобрать номер
+        a(href="#")
+          button.selection Подобрать номер
     p.caption Лучшие номера для вашей работы,<br>отдыха и просто вдохновения
   

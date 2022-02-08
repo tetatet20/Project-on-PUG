@@ -369,6 +369,12 @@ p {
   line-height: 15px;
   text-transform: uppercase;
   color: #1F2041;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .guests::after {
   position: absolute;
@@ -390,6 +396,16 @@ p {
   font-family: Montserrat;
   padding: 13px 193px 13px 15px;
   margin-top: 5px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.guests-input:focus {
+  outline: none;
 }
 
 .selection {
@@ -516,23 +532,23 @@ p {
             </label>
           </div>
           <label class="guests">Гости
-            <input class="guests-input" type="text" value="Сколько гостей"/>
+            <input class="guests-input" type="text" value="Сколько гостей" readonly="readonly"/>
             <div class="dropdown-menu">
               <div class="age">Взрослые
-                <div class="dropdown-buttons">   <span class="round-button adults-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus">+</span></div>
+                <div class="dropdown-buttons"><span class="round-button adults-minus" data-button="adult-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="adult-plus">+</span></div>
               </div>
               <div class="age">Дети
-                <div class="dropdown-buttons"> <span class="round-button children-minus">-</span><span class="children-number">0</span><span class="round-button children-plus">+</span></div>
+                <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="childrens-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="childrens-plus">+</span></div>
               </div>
               <div class="age">Младенцы
-                <div class="dropdown-buttons"><span class="round-button babies-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus">+</span></div>
+                <div class="dropdown-buttons"><span class="round-button babies-minus" data-button="babies-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus" data-button="babies-plus">+</span></div>
               </div>
               <div class="clean-apply">
                 <button class="clean-apply-button clean">Очистить</button>
                 <button class="clean-apply-button apply">Применить</button>
               </div>
-            </div>
-            <button class="selection">Подобрать номер</button>
+            </div><a href="#">
+              <button class="selection">Подобрать номер</button></a>
           </label>
         </div>
         <p class="caption">Лучшие номера для вашей работы,<br>отдыха и просто вдохновения</p>
