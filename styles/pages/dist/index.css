@@ -364,6 +364,12 @@ p {
   line-height: 15px;
   text-transform: uppercase;
   color: #1F2041;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .guests::after {
   position: absolute;
@@ -385,6 +391,16 @@ p {
   font-family: Montserrat;
   padding: 13px 193px 13px 15px;
   margin-top: 5px;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.guests-input:focus {
+  outline: none;
 }
 
 .selection {
@@ -424,6 +440,7 @@ p {
   position: absolute;
   bottom: -100px;
   left: 0;
+  display: none;
   width: 320px;
   height: 160px;
   background-color: white;
