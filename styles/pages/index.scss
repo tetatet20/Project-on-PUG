@@ -1,7 +1,7 @@
 @import "../components/header.scss";
 @import "../components/footer.scss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 button {
     padding: 0;
@@ -192,7 +192,7 @@ $grey-25: rgba(31, 32, 65, .25);
     position: absolute;
     bottom: -100px;
     left: 0;
-    // display: none;
+    display: none;
     width: 320px;
     height: 160px;
     background-color: white;
