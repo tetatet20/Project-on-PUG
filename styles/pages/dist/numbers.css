@@ -376,6 +376,7 @@ p {
 
 .more-comfort {
   position: relative;
+  cursor: pointer;
 }
 .more-comfort::after {
   position: absolute;
@@ -385,6 +386,19 @@ p {
   border-bottom: 2px solid rgba(31, 32, 65, 0.5);
   border-left: 2px solid rgba(31, 32, 65, 0.5);
   transform: rotate(315deg);
+  right: 15px;
+  top: 2px;
+  cursor: pointer;
+}
+
+.active {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
   right: 15px;
   top: 2px;
   cursor: pointer;
@@ -444,4 +458,11 @@ p {
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
+}
+
+.dropdown-checkbox {
+  display: none;
+}
+.dropdown-checkbox-show {
+  display: block;
 }

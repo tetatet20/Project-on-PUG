@@ -154,6 +154,7 @@ $grey-25: rgba(31, 32, 65, .25);
 
 .more-comfort {
     position: relative;
+    cursor: pointer;
     &::after {
         position: absolute;
         content: "";
@@ -167,6 +168,20 @@ $grey-25: rgba(31, 32, 65, .25);
         cursor: pointer;
     }
 }
+
+.active {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid $grey-50;
+    border-left: 2px solid $grey-50;
+    transform: rotate(135deg);
+    right: 15px;
+    top: 2px;
+    cursor: pointer;
+}
+
 
 .title-text {
     font-family: Montserrat;
@@ -213,4 +228,12 @@ $grey-25: rgba(31, 32, 65, .25);
     font-size: 14px;
     line-height: 18px;
     color: rgba(31, 32, 65, 0.75);
+}
+
+.dropdown-checkbox {
+    display: none;
+     
+    &-show {
+        display: block;
+    }
 }

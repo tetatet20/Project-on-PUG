@@ -380,6 +380,7 @@ p {
 
 .more-comfort {
   position: relative;
+  cursor: pointer;
 }
 .more-comfort::after {
   position: absolute;
@@ -389,6 +390,19 @@ p {
   border-bottom: 2px solid rgba(31, 32, 65, 0.5);
   border-left: 2px solid rgba(31, 32, 65, 0.5);
   transform: rotate(315deg);
+  right: 15px;
+  top: 2px;
+  cursor: pointer;
+}
+
+.active {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(135deg);
   right: 15px;
   top: 2px;
   cursor: pointer;
@@ -448,6 +462,13 @@ p {
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.75);
+}
+
+.dropdown-checkbox {
+  display: none;
+}
+.dropdown-checkbox-show {
+  display: block;
 }
     </style>
   </head>
@@ -516,6 +537,32 @@ p {
             <input class="date-guests big-margin" type="text" value="2 спальни, 2 кровати..." readonly="readonly"/>
           </label>
           <div class="more-comfort title-text">Дополнительные удобства</div>
+          <div class="dropdown-checkbox"> 
+            <div class="checkbox-container">
+              <div class="checkbox-passive" id="checkbox_6"></div>
+              <p class="one-may">Завтрак</p>
+            </div>
+            <div class="checkbox-container">
+              <div class="checkbox-passive" id="checkbox_7"> </div>
+              <p class="one-may">Письменный стол</p>
+            </div>
+            <div class="checkbox-container">
+              <div class="checkbox-passive" id="checkbox_8"></div>
+              <p class="one-may">Стул для кормления</p>
+            </div>
+            <div class="checkbox-container">
+              <div class="checkbox-passive" id="checkbox_9"></div>
+              <p class="one-may">Кроватка</p>
+            </div>
+            <div class="checkbox-container">
+              <div class="checkbox-passive" id="checkbox_10"> </div>
+              <p class="one-may">Телевизор</p>
+            </div>
+            <div class="checkbox-container">
+              <div class="checkbox-passive" id="checkbox_11"></div>
+              <p class="one-may">Шампунь</p>
+            </div>
+          </div>
         </div>
         <div class="selection-numbers"></div>
       </div>
