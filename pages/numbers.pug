@@ -10,10 +10,10 @@ block scripts
 block content
     .conteiner
         .button-menu
-            label.title-text Даты пребывания в отеле
-                input.date-guests.date-stay(type="text" value="19 авг - 23 авг")
-            label.title-text Гости
-                input.date-guests.number-guests(type="text" value="3 гостя, 1 младенец")
+            label.title-text.arrow-date-guests Даты пребывания в отеле
+                input.date-guests.date-stay(type="text" value="19 авг - 23 авг" readonly)
+            label.title-text.arrow-date-guests Гости
+                input.date-guests.number-guests(type="text" value="3 гостя, 1 младенец" readonly)
             label.title-text диапазон цены 5000-10000
                 input(<input type="image" name="image" src="../../img/slider.png")
             p.price-range Стоимость за сутки пребывания в номере
@@ -21,13 +21,13 @@ block content
                 p.title-text Правила дома
                     .checkbox-container
                         .checkbox-passive#checkbox_1
-                        p Можно курить
+                        p.one-may Можно курить
                     .checkbox-container
                         .checkbox-passive#checkbox_2 
-                        p Можно с питомцами
+                        p.one-may Можно с питомцами
                     .checkbox-container.big-margin
                         .checkbox-passive#checkbox_3
-                        p.maximum-people Можно пригласить гостей<br>(до 10 человек)
+                        p.one-may Можно пригласить гостей<br>(до 10 человек)
             .availability 
                 p.title-text Доступность
                 .checkbox-container
@@ -40,8 +40,7 @@ block content
                         .checkbox-passive#checkbox_5 
                         p.caption-checkbox Помощник для инвалидов 
                         p.explanation На 1 этаже вас встретит специалист<br>и проводит до номера.
-            label.comfort-room.big-margin.title-text Удобства номера
-                input.date-guests.big-margin(type="text" value="2 спальни, 2 кровати...")
+            label.arrow-comfort.big-margin.title-text Удобства номера
+                input.date-guests.big-margin(type="text" value="2 спальни, 2 кровати..." readonly)
             .more-comfort.title-text Дополнительные удобства
-                
         .selection-numbers

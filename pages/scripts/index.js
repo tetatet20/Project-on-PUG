@@ -209,7 +209,7 @@ function updateCompleteCount() {
 //     updateCompleteCount();
 // }
 
-// // Функция для лбновления общего счетчика. складываем переменные (без innerText, потому что это большая нагрузка)
+// // Функция для обновления общего счетчика. складываем переменные (без innerText, потому что это большая нагрузка)
 // // Проверяем и подставляем в инпут
 // function updateCompleteCount() {
 //     const guestsSum = adults + childrens + babies;

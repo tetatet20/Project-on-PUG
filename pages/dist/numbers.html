@@ -296,13 +296,18 @@ p {
   border-radius: 4px;
   box-sizing: border-box;
   margin-top: 5px;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
+  padding-left: 15px;
 }
 
-.comfort-room {
+.arrow-date-guests {
   position: relative;
   margin-top: 30px;
 }
-.comfort-room::after {
+.arrow-date-guests::after {
   position: absolute;
   content: "";
   width: 6px;
@@ -310,7 +315,7 @@ p {
   border-bottom: 2px solid rgba(31, 32, 65, 0.5);
   border-left: 2px solid rgba(31, 32, 65, 0.5);
   transform: rotate(315deg);
-  right: 15px;
+  left: 240px;
   top: 37px;
   cursor: pointer;
 }
@@ -318,7 +323,8 @@ p {
 .checkbox {
   margin-top: 30px;
 }
-.checkbox p {
+
+.one-may {
   font-size: 14px;
   line-height: 18px;
   color: rgba(31, 32, 65, 0.5);
@@ -328,19 +334,9 @@ p {
   margin-bottom: 14px;
   display: flex;
   align-items: center;
-  position: relative;
-}
-.checkbox-container:last-child {
-  margin-top: 42px;
 }
 .checkbox-container:first-child {
   margin-top: 17px;
-}
-
-.maximum-people {
-  position: absolute;
-  top: 1px;
-  left: 29px;
 }
 
 .checkbox-passive {
@@ -356,6 +352,9 @@ p {
   margin-right: 10px;
 }
 
+.checkbox-active {
+  border: 1px solid #BC9CFF;
+}
 .checkbox-active::after {
   position: absolute;
   top: 3px;
@@ -391,7 +390,7 @@ p {
   border-left: 2px solid rgba(31, 32, 65, 0.5);
   transform: rotate(315deg);
   right: 15px;
-  top: 5px;
+  top: 2px;
   cursor: pointer;
 }
 
@@ -409,6 +408,22 @@ p {
   margin-bottom: 20px;
 }
 
+.arrow-comfort {
+  position: relative;
+}
+.arrow-comfort::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(315deg);
+  right: 15px;
+  top: 37px;
+  cursor: pointer;
+}
+
 .number-guests {
   margin-bottom: 30px;
 }
@@ -421,14 +436,11 @@ p {
 }
 
 .explanation {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  display: inline;
   font-size: 12px;
   line-height: 14px;
   font-weight: 400;
   color: rgba(31, 32, 65, 0.5);
+  margin-left: 30px;
 }
 
 .caption-checkbox {
@@ -457,11 +469,11 @@ p {
       </div>
       <div class="conteiner">
         <div class="button-menu">
-          <label class="title-text">Даты пребывания в отеле
-            <input class="date-guests date-stay" type="text" value="19 авг - 23 авг"/>
+          <label class="title-text arrow-date-guests">Даты пребывания в отеле
+            <input class="date-guests date-stay" type="text" value="19 авг - 23 авг" readonly="readonly"/>
           </label>
-          <label class="title-text">Гости
-            <input class="date-guests number-guests" type="text" value="3 гостя, 1 младенец"/>
+          <label class="title-text arrow-date-guests">Гости
+            <input class="date-guests number-guests" type="text" value="3 гостя, 1 младенец" readonly="readonly"/>
           </label>
           <label class="title-text">диапазон цены 5000-10000
             <input <input="<input" type="image" name="image" src="../../img/slider.png"/>
@@ -471,15 +483,15 @@ p {
             <p class="title-text">Правила дома
               <div class="checkbox-container">
                 <div class="checkbox-passive" id="checkbox_1"></div>
-                <p>Можно курить</p>
+                <p class="one-may">Можно курить</p>
               </div>
               <div class="checkbox-container">
                 <div class="checkbox-passive" id="checkbox_2"> </div>
-                <p>Можно с питомцами</p>
+                <p class="one-may">Можно с питомцами</p>
               </div>
               <div class="checkbox-container big-margin">
                 <div class="checkbox-passive" id="checkbox_3"></div>
-                <p class="maximum-people">Можно пригласить гостей<br>(до 10 человек)</p>
+                <p class="one-may">Можно пригласить гостей<br>(до 10 человек)</p>
               </div>
             </p>
           </div>
@@ -500,8 +512,8 @@ p {
               </div>
             </div>
           </div>
-          <label class="comfort-room big-margin title-text">Удобства номера
-            <input class="date-guests big-margin" type="text" value="2 спальни, 2 кровати..."/>
+          <label class="arrow-comfort big-margin title-text">Удобства номера
+            <input class="date-guests big-margin" type="text" value="2 спальни, 2 кровати..." readonly="readonly"/>
           </label>
           <div class="more-comfort title-text">Дополнительные удобства</div>
         </div>
