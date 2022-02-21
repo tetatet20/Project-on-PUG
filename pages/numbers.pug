@@ -1,0 +1,82 @@
+extends ../layout/default.pug
+
+block styles
+    style
+      include ../styles/pages/dist/numbers.css
+
+block scripts 
+  script(src='../scripts/numbers.js')
+
+block content
+    .conteiner
+        .button-menu
+            label.title-text.arrow-date-guests Даты пребывания в отеле
+                input.date-guests.date-stay(type="text" value="19 авг - 23 авг" readonly)
+            label.title-text.arrow-date-guests Гости
+                input.date-guests.number-guests(type="text" value="3 гостя, 1 младенец" readonly)
+            p.title-text диапазон цены 5000-10000
+            .slider
+                .polzunok
+            p.price-range Стоимость за сутки пребывания в номере
+            .checkbox
+                p.title-text Правила дома
+                    .checkbox-container
+                        .checkbox-passive#checkbox_1
+                        p.one-may Можно курить
+                    .checkbox-container
+                        .checkbox-passive#checkbox_2 
+                        p.one-may Можно с питомцами
+                    .checkbox-container.big-margin
+                        .checkbox-passive#checkbox_3
+                        p.one-may Можно пригласить гостей<br>(до 10 человек)
+            .availability 
+                p.title-text Доступность
+                .checkbox-container
+                    .availability-checkbox
+                        .checkbox-passive#checkbox_4
+                        p.caption-checkbox Широкий коридор 
+                        p.explanation Ширина коридоров в номере<br>не менее 91 см
+                .checkbox-container.big-margin
+                    .availability-checkbox
+                        .checkbox-passive#checkbox_5 
+                        p.caption-checkbox Помощник для инвалидов 
+                        p.explanation На 1 этаже вас встретит специалист<br>и проводит до номера.
+            label.arrow-comfort.big-margin.title-text Удобства номера
+                input.date-guests.big-margin.roma(type="text" value="2 спальни, 2 кровати..." )
+                .dropdown-menu-comfort
+                    .facilities Спальни
+                        .dropdown-buttons
+                            span.round-button.adults-minus(data-button="adult-minus") -
+                            span.adults-number 0
+                            span.round-button.adults-plus(data-button="adult-plus") +
+                    .facilities Кровати
+                        .dropdown-buttons  
+                            span.round-button.children-minus(data-button="childrens-minus") -
+                            span.children-number 0
+                            span.round-button.children-plus(data-button="childrens-plus") +
+                    .facilities Ванные комнаты
+                        .dropdown-buttons
+                            span.round-button.babies-minus(data-button="babies-minus") -
+                            span.babies-number 0
+                            span.round-button.babies-plus(data-button="babies-plus") +
+            .more-comfort.title-text Дополнительные удобства
+            .dropdown-checkbox 
+                .checkbox-container
+                    .checkbox-passive#checkbox_6
+                    p.one-may Завтрак
+                .checkbox-container
+                    .checkbox-passive#checkbox_7 
+                    p.one-may Письменный стол
+                .checkbox-container
+                    .checkbox-passive#checkbox_8
+                    p.one-may Стул для кормления
+                .checkbox-container
+                    .checkbox-passive#checkbox_9
+                    p.one-may Кроватка
+                .checkbox-container
+                    .checkbox-passive#checkbox_10 
+                    p.one-may Телевизор
+                .checkbox-container
+                    .checkbox-passive#checkbox_11
+                    p.one-may Шампунь
+        .selection-numbers

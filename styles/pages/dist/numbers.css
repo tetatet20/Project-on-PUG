@@ -242,7 +242,7 @@ li {
 button {
   padding: 0;
   border: none;
-  font: inherit;
+  font-family: inherit;
   color: inherit;
   background-color: transparent;
 }
@@ -264,84 +264,151 @@ p {
   margin: 0px;
 }
 
-.container {
-  width: 1440px;
-  margin: 0 auto;
+.conteiner {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding: 30px 140px 70px;
   box-sizing: border-box;
-  align-items: center;
+  font-family: Montserrat;
 }
 
-.content {
-  background-image: url(../../img/background.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 1440px;
-  height: 830px;
-  margin: 0 auto;
+.button-menu {
+  width: 270px;
+  height: 800px;
+  margin-right: 60px;
+  color: rgba(31, 32, 65, 0.5);
 }
 
-.number-selection {
-  width: 380px;
-  height: 380px;
-  background-color: white;
-  margin-top: 70px;
-  margin-left: 140px;
+.selection-numbers {
+  width: 100%;
+  background-color: gray;
+}
+
+.date-guests {
+  width: 266px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  padding: 40px 30px 30px 30px;
   box-sizing: border-box;
-}
-
-.caption {
-  margin-right: 134px;
-  text-align: right;
-  margin-top: 320px;
+  margin-top: 5px;
   font-family: Montserrat;
   font-size: 14px;
   line-height: 24px;
   color: rgba(31, 32, 65, 0.75);
+  padding-left: 15px;
 }
 
-.arrival-departure {
-  width: 150px;
-  height: 44px;
+.arrow-date-guests {
+  position: relative;
+  margin-top: 30px;
+}
+.arrow-date-guests::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(315deg);
+  left: 240px;
+  top: 37px;
+  cursor: pointer;
+}
+
+.checkbox {
+  margin-top: 30px;
+}
+
+.one-may {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.checkbox-container {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+}
+.checkbox-container:first-child {
+  margin-top: 17px;
+}
+
+.checkbox-passive {
+  width: 20px;
+  height: 20px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
+  display: inline-block;
   box-sizing: border-box;
-  font-family: Montserrat;
-  padding: 8px 0px 8px 15px;
-  margin-top: 5px;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
 }
-.arrival-departure-container {
+
+.checkbox-active {
+  border: 1px solid #BC9CFF;
+}
+.checkbox-active::after {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  content: "";
+  width: 5px;
+  height: 7px;
+  border-bottom: 2px solid #BC9CFF;
+  border-right: 2px solid #BC9CFF;
+  transform: rotate(40deg);
+}
+
+.availability-checkbox {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.big-margin {
+  margin-bottom: 30px;
+}
+
+.more-comfort {
+  position: relative;
+  cursor: pointer;
+}
+.more-comfort::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(315deg);
+  right: 15px;
+  top: 2px;
+  cursor: pointer;
+}
+
+.title-text {
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  margin-bottom: 16px;
+}
+
+.date-stay {
   margin-bottom: 20px;
 }
 
-.number-selection p {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-  color: #1F2041;
-  margin-bottom: 21px;
-  font-family: Montserrat;
-}
-
-.dropdown-calendar {
-  display: flex;
-  flex-direction: column;
+.arrow-comfort {
   position: relative;
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041;
 }
-.dropdown-calendar::after {
+.arrow-comfort::after {
   position: absolute;
   content: "";
   width: 6px;
@@ -351,96 +418,54 @@ p {
   transform: rotate(315deg);
   right: 15px;
   top: 37px;
+  cursor: pointer;
 }
 
-.dropdown-calendar:first-child {
-  margin-right: 20px;
+.number-guests {
+  margin-bottom: 30px;
 }
 
-.guests {
-  position: relative;
-  font-family: Montserrat;
-  font-weight: bold;
+.price-range {
+  margin-bottom: 30px;
   font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.guests::after {
-  position: absolute;
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
-  border-left: 2px solid rgba(31, 32, 65, 0.5);
-  transform: rotate(315deg);
-  right: 15px;
-  top: 37px;
-}
-.guests-input {
-  width: 320px;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-family: Montserrat;
-  padding: 13px 193px 13px 15px;
-  margin-top: 5px;
-  cursor: pointer;
-}
-.guests-input:focus {
-  outline: none;
+  line-height: 14px;
+  margin-top: 13px;
 }
 
-.selection {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  color: white;
-  text-align: center;
-  display: inline-block;
-  border-radius: 22px;
-  width: 320px;
-  height: 44px;
-  text-decoration: none;
-  border: none;
-  font-weight: bold;
-  font-family: Montserrat;
+.explanation {
   font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  align-items: center;
-  cursor: pointer;
-  margin-top: 31px;
-  letter-spacing: 1;
-  position: relative;
-}
-.selection::after {
-  position: absolute;
-  content: url("../../img/arrow_forward_white.svg");
-  width: 44px;
-  height: 44px;
-  transform: rotate(360deg);
-  right: 0;
-  top: 13px;
-  cursor: pointer;
+  line-height: 14px;
+  font-weight: 400;
+  color: rgba(31, 32, 65, 0.5);
+  margin-left: 30px;
 }
 
-.dropdown-menu {
+.caption-checkbox {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.75);
+}
+
+.dropdown-checkbox {
+  display: none;
+  z-index: 2;
+}
+.dropdown-checkbox-show {
+  display: block;
+}
+
+.dropdown-menu-comfort {
   z-index: 2;
   position: absolute;
-  bottom: -100px;
+  bottom: -133px;
   left: 0;
   display: none;
-  width: 320px;
-  height: 160px;
+  width: 266px;
+  height: 119px;
   background-color: white;
   text-align: left;
-  padding: 13px 10px 13px 15px;
+  padding: 7px 10px 7px 15px;
   font-family: Montserrat;
   font-weight: bold;
   font-size: 12px;
@@ -449,7 +474,7 @@ p {
   border-radius: 2px;
   box-sizing: border-box;
 }
-.dropdown-menu-show {
+.dropdown-menu-comfort-show {
   display: block;
 }
 
@@ -460,22 +485,14 @@ p {
   align-items: center;
 }
 
-.age {
+.facilities {
   display: flex;
   justify-content: space-between;
   margin-bottom: 7px;
   align-items: center;
 }
-
-.clean-apply {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 19px;
-}
-.clean-apply-button {
-  color: #BC9CFF;
-  cursor: pointer;
-  text-transform: uppercase;
+.facilities:last-child {
+  white-space: nowrap;
 }
 
 .round-button {
@@ -491,4 +508,49 @@ p {
   box-sizing: border-box;
   padding: 6px 6px;
   cursor: pointer;
+}
+
+.slider {
+  width: 266px;
+  height: 6px;
+  background: white;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 3px;
+  position: relative;
+}
+.slider::after {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 67px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  z-index: 2;
+}
+.slider::before {
+  z-index: 2;
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 147px;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+}
+
+.polzunok {
+  z-index: 1;
+  position: absolute;
+  top: -1px;
+  left: 70px;
+  width: 80px;
+  height: 6px;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  border-radius: 3px;
 }
