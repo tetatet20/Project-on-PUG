@@ -6,7 +6,7 @@
 $grey-50: rgba(31, 32, 65, .5);
 $grey-25: rgba(31, 32, 65, .25);
 
-@mixin arrow {
+@mixin arrow() {
     position: absolute;
     content: "";
     width: 6px;
@@ -59,6 +59,7 @@ p {
     margin-right: 60px;
     color:$grey-50;
 }
+
 .selection-numbers {
     width: 100%;
     background-color:gray; 
@@ -128,6 +129,7 @@ p {
 
 .checkbox-active {
     border: 1px solid #BC9CFF;
+
     &::after {
         position: absolute;
         top: 3px;
@@ -155,17 +157,12 @@ p {
 .more-comfort {
     position: relative;
     cursor: pointer;
+
     &::after {
-        position: absolute;
-        content: "";
-        width: 6px;
-        height: 6px;
-        border-bottom: 2px solid $grey-50;
-        border-left: 2px solid $grey-50;
-        transform: rotate(315deg);
+        @include arrow();
+
         right: 15px;
         top: 2px;
-        cursor: pointer;
     }
 }
 
@@ -219,6 +216,7 @@ p {
 .dropdown-checkbox {
     display: none;
     z-index: 2;
+
     &-show {
         display: block;
     }
