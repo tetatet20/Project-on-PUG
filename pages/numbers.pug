@@ -5,9 +5,11 @@ block styles
       include ../styles/pages/dist/numbers.css
 
 block scripts 
-  script(src='../scripts/numbers.js')
+    script(src='../scripts/numbers.js')
+    script(src="../../components/checkbox/checkbox.js")
 
 block content
+    include ../components/checkbox/checkbox.pug
     .conteiner
         .button-menu
             label.title-text.arrow-date-guests Даты пребывания в отеле
@@ -61,22 +63,10 @@ block content
                             span.round-button.babies-plus(data-button="babies-plus") +
             .more-comfort.title-text Дополнительные удобства
             .dropdown-checkbox 
-                .checkbox-container
-                    .checkbox-passive#checkbox_6
-                    p.one-may Завтрак
-                .checkbox-container
-                    .checkbox-passive#checkbox_7 
-                    p.one-may Письменный стол
-                .checkbox-container
-                    .checkbox-passive#checkbox_8
-                    p.one-may Стул для кормления
-                .checkbox-container
-                    .checkbox-passive#checkbox_9
-                    p.one-may Кроватка
-                .checkbox-container
-                    .checkbox-passive#checkbox_10 
-                    p.one-may Телевизор
-                .checkbox-container
-                    .checkbox-passive#checkbox_11
-                    p.one-may Шампунь
+                +checkbox('Завтрак')
+                +checkbox('Письменный стол')
+                +checkbox('Стул для кормления')
+                +checkbox('Кроватка')
+                +checkbox('Телевизор')
+                +checkbox('Шампунь')
         .selection-numbers

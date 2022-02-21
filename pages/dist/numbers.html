@@ -243,6 +243,49 @@ li {
   margin: 26px 0;
 }
 
+.checkbox-component-container {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+}
+.checkbox-component-container:first-child {
+  margin-top: 17px;
+}
+
+.checkbox-passive {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  display: inline-block;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.checkbox-active {
+  border: 1px solid #BC9CFF;
+}
+.checkbox-active::after {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  content: "";
+  width: 5px;
+  height: 7px;
+  border-bottom: 2px solid #BC9CFF;
+  border-right: 2px solid #BC9CFF;
+  transform: rotate(40deg);
+}
+
+.one-may {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
 button {
   padding: 0;
   border: none;
@@ -391,8 +434,10 @@ p {
   border-left: 2px solid rgba(31, 32, 65, 0.5);
   transform: rotate(315deg);
   right: 15px;
-  top: 2px;
+  top: 37px;
   cursor: pointer;
+  right: 15px;
+  top: 2px;
 }
 
 .title-text {
@@ -638,30 +683,30 @@ p {
           </label>
           <div class="more-comfort title-text">Дополнительные удобства</div>
           <div class="dropdown-checkbox"> 
-            <div class="checkbox-container">
-              <div class="checkbox-passive" id="checkbox_6"></div>
-              <p class="one-may">Завтрак</p>
-            </div>
-            <div class="checkbox-container">
-              <div class="checkbox-passive" id="checkbox_7"> </div>
-              <p class="one-may">Письменный стол</p>
-            </div>
-            <div class="checkbox-container">
-              <div class="checkbox-passive" id="checkbox_8"></div>
-              <p class="one-may">Стул для кормления</p>
-            </div>
-            <div class="checkbox-container">
-              <div class="checkbox-passive" id="checkbox_9"></div>
-              <p class="one-may">Кроватка</p>
-            </div>
-            <div class="checkbox-container">
-              <div class="checkbox-passive" id="checkbox_10"> </div>
-              <p class="one-may">Телевизор</p>
-            </div>
-            <div class="checkbox-container">
-              <div class="checkbox-passive" id="checkbox_11"></div>
-              <p class="one-may">Шампунь</p>
-            </div>
+                  <div class="checkbox-component-container">
+                    <div class="checkbox-passive"></div>
+                    <p class="one-may">Завтрак</p>
+                  </div>
+                  <div class="checkbox-component-container">
+                    <div class="checkbox-passive"></div>
+                    <p class="one-may">Письменный стол</p>
+                  </div>
+                  <div class="checkbox-component-container">
+                    <div class="checkbox-passive"></div>
+                    <p class="one-may">Стул для кормления</p>
+                  </div>
+                  <div class="checkbox-component-container">
+                    <div class="checkbox-passive"></div>
+                    <p class="one-may">Кроватка</p>
+                  </div>
+                  <div class="checkbox-component-container">
+                    <div class="checkbox-passive"></div>
+                    <p class="one-may">Телевизор</p>
+                  </div>
+                  <div class="checkbox-component-container">
+                    <div class="checkbox-passive"></div>
+                    <p class="one-may">Шампунь</p>
+                  </div>
           </div>
         </div>
         <div class="selection-numbers"></div>
@@ -708,6 +753,7 @@ p {
         </div>
       </div>
       <script src="../scripts/numbers.js"></script>
+      <script src="../../components/checkbox/checkbox.js"></script>
     </div>
   </body>
 </html>
