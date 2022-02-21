@@ -14,8 +14,9 @@ block content
                 input.date-guests.date-stay(type="text" value="19 авг - 23 авг" readonly)
             label.title-text.arrow-date-guests Гости
                 input.date-guests.number-guests(type="text" value="3 гостя, 1 младенец" readonly)
-            label.title-text диапазон цены 5000-10000
-                input(<input type="image" name="image" src="../../img/slider.png")
+            p.title-text диапазон цены 5000-10000
+            .slider
+                .polzunok
             p.price-range Стоимость за сутки пребывания в номере
             .checkbox
                 p.title-text Правила дома
@@ -41,7 +42,23 @@ block content
                         p.caption-checkbox Помощник для инвалидов 
                         p.explanation На 1 этаже вас встретит специалист<br>и проводит до номера.
             label.arrow-comfort.big-margin.title-text Удобства номера
-                input.date-guests.big-margin(type="text" value="2 спальни, 2 кровати..." readonly)
+                input.date-guests.big-margin.roma(type="text" value="2 спальни, 2 кровати..." )
+                .dropdown-menu-comfort
+                    .facilities Спальни
+                        .dropdown-buttons
+                            span.round-button.adults-minus(data-button="adult-minus") -
+                            span.adults-number 0
+                            span.round-button.adults-plus(data-button="adult-plus") +
+                    .facilities Кровати
+                        .dropdown-buttons  
+                            span.round-button.children-minus(data-button="childrens-minus") -
+                            span.children-number 0
+                            span.round-button.children-plus(data-button="childrens-plus") +
+                    .facilities Ванные комнаты
+                        .dropdown-buttons
+                            span.round-button.babies-minus(data-button="babies-minus") -
+                            span.babies-number 0
+                            span.round-button.babies-plus(data-button="babies-plus") +
             .more-comfort.title-text Дополнительные удобства
             .dropdown-checkbox 
                 .checkbox-container
