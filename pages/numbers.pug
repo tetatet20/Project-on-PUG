@@ -16,18 +16,28 @@ block content
                 input.date-guests.date-stay(type="text" value="19 авг - 23 авг" readonly)
             label.title-text.arrow-date-guests Гости
                 input.date-guests.number-guests(type="text" value="3 гостя, 1 младенец" readonly)
-            p.title-text диапазон цены 5000-10000
-            .slider
-                .polzunok
+
+                .filtres 
+                    .filtres_item.filtres_price 
+                        h3.filtres_price_title Цена
+                        input.slider(type="range" min="0" max="1000000" step="100")
+                        .filtres_price_slider 
+                        .filtres_price_inputs
+                            label.filtres_price_label(for="") 
+                                input.filtres_price_input(type="number"  min="0" value="0")
+                                span р
+                            label.filtres_price_label(for="") 
+                                input.filtres_price_input(type="number"  min="0" value="5000")
+                                span р
+
+            //- p.title-text диапазон цены 5000-10000
+            //- .slider
+            //-     .polzunok
             p.price-range Стоимость за сутки пребывания в номере
             .checkbox
                 p.title-text Правила дома
-                    .checkbox-container
-                        .checkbox-passive#checkbox_1
-                        p.one-may Можно курить
-                    .checkbox-container
-                        .checkbox-passive#checkbox_2 
-                        p.one-may Можно с питомцами
+                    +checkbox('Можно курить')
+                    +checkbox('Можно с питомцами')
                     .checkbox-container.big-margin
                         .checkbox-passive#checkbox_3
                         p.one-may Можно пригласить гостей<br>(до 10 человек)
