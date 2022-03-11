@@ -1,7 +1,7 @@
-const all = document.querySelectorAll('.checkbox-component-container');
+const checkboxes = document.querySelectorAll('.checkbox-passive')
 
-all.forEach(el => {
-  el.addEventListener('click', (e) => {
-    e.target.classList.toggle('checkbox-active');
-  })
+checkboxes.forEach(function (checkbox) {
+    checkbox.addEventListener('click', function () {
+        checkbox.classList.toggle('checkbox-active')
+    })
 })

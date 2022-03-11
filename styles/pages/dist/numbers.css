@@ -282,6 +282,146 @@ li {
   color: rgba(31, 32, 65, 0.5);
 }
 
+.card-container {
+  width: 270px;
+  height: 257px;
+  background-color: white;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+}
+.card-container:not(:last-child) {
+  margin-bottom: 20px;
+  margin-right: 12px;
+}
+
+.card-container img {
+  border-radius: 4px 4px 0px 0px;
+}
+
+.card-bottom {
+  padding: 20px;
+}
+
+.number {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 17px;
+}
+
+.price {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.luxe {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+.card-info::after {
+  position: absolute;
+  content: "";
+  top: 29px;
+  left: 0px;
+  width: 230px;
+  height: 1px;
+  background-color: rgba(31, 32, 65, 0.1);
+}
+
+.card-review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.reviews {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.img-container {
+  position: relative;
+}
+.img-container::after {
+  position: absolute;
+  content: "";
+  top: 72px;
+  left: 242px;
+  width: 8px;
+  height: 8px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.img-container::before {
+  position: absolute;
+  content: "";
+  top: 72px;
+  left: 20px;
+  width: 8px;
+  height: 8px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+  transform: rotate(225deg);
+  cursor: pointer;
+}
+
+.span-container {
+  position: absolute;
+  top: 132px;
+  left: 215px;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.circle-active {
+  cursor: pointer;
+  width: 7px;
+  height: 7px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  margin-right: 3.5px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.circle-passive {
+  cursor: pointer;
+  display: block;
+  flex-shrink: 0;
+  width: 7px;
+  height: 7px;
+  box-sizing: border-box;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
+  margin-right: 3.5px;
+}
+
 button {
   padding: 0;
   border: none;
@@ -307,6 +447,10 @@ p {
   margin: 0px;
 }
 
+h2 {
+  margin: 0;
+}
+
 .conteiner {
   display: flex;
   justify-content: space-between;
@@ -314,6 +458,7 @@ p {
   padding: 30px 140px 70px;
   box-sizing: border-box;
   font-family: Montserrat;
+  background-color: whitesmoke;
 }
 
 .button-menu {
@@ -324,8 +469,10 @@ p {
 }
 
 .selection-numbers {
-  width: 100%;
-  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: max-content;
 }
 
 .date-guests {
@@ -406,6 +553,10 @@ p {
   transform: rotate(40deg);
 }
 
+.availability {
+  margin-bottom: 30px;
+}
+
 .availability-checkbox {
   display: flex;
   flex-direction: row;
@@ -413,11 +564,8 @@ p {
   align-items: center;
 }
 
-.big-margin {
-  margin-bottom: 30px;
-}
-
 .more-comfort {
+  margin-top: 30px;
   position: relative;
   cursor: pointer;
 }
@@ -580,4 +728,10 @@ input::-webkit-inner-spin-button {
 
 .filtres_price_label {
   display: flex;
+}
+
+.h2 {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
 }
