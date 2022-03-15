@@ -307,21 +307,23 @@ p {
   margin: 0px;
 }
 
-.content {
+.authorization {
   background-image: url(../../img/signUp.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 1440px;
-  height: 830px;
-  padding-top: 19px;
+  height: min-content;
+  padding-top: 172px;
+  padding-bottom: 172px;
   display: flex;
   font-family: Montserrat;
+  margin: 0 auto;
 }
 
-.account-registration {
-  width: 380px;
-  height: 646px;
+.authorization-container {
+  width: min-content;
+  height: min-content;
   margin: 0 auto;
   padding: 40px 30px 30px 30px;
   background-color: white;
@@ -357,6 +359,12 @@ p {
 }
 .account-registration-input:first-child {
   margin-bottom: 10px;
+}
+
+.date-input {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Montserrat;
 }
 
 .special-offer {
@@ -458,6 +466,17 @@ p {
   cursor: pointer;
   letter-spacing: 0.5;
   margin-bottom: 30px;
+  position: relative;
+}
+.register-button::after {
+  position: absolute;
+  content: url("../../img/arrow_forward_white.svg");
+  width: 44px;
+  height: 44px;
+  transform: rotate(360deg);
+  right: 0;
+  top: 13px;
+  cursor: pointer;
 }
 
 .to-come-in-button {

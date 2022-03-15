@@ -468,11 +468,9 @@ h2 {
   color: rgba(31, 32, 65, 0.5);
 }
 
-.selection-numbers {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: max-content;
+.card-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .date-guests {

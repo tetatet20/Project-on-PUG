@@ -66,11 +66,12 @@ h2 {
     color:$grey-50;
 }
 
-.selection-numbers {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: max-content;
+.card-numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // width: max-content;
 }
 
 .date-guests {
@@ -360,3 +361,4 @@ width: 50px;
     width: 100%;
     margin-bottom: 10px;
 }
+ 

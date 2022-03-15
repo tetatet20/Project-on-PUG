@@ -1,14 +1,12 @@
-extends default.pug
-
-block styles
-    style
-      include ../styles/pages/dist/signUp.css
-
-block scripts 
-  script(src='../scripts/signUp.js')
-
-
-block content
-  .content
-    .account-registration 
-      
+html
+  head
+    block title
+    block styles
+  body
+    .container
+      include ../components/header.pug 
+      .authorization
+        .authorization-container
+          block content
+      include ../components/footer.pug
+      block scripts

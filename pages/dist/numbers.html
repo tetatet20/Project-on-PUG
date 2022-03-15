@@ -1,7 +1,7 @@
 
 <html>
   <head>
-    <title>My Site</title>
+    <title>Номера</title>
     <style>@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 .header {
@@ -472,11 +472,9 @@ h2 {
   color: rgba(31, 32, 65, 0.5);
 }
 
-.selection-numbers {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: max-content;
+.card-numbers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .date-guests {
@@ -743,7 +741,7 @@ input::-webkit-inner-spin-button {
   </head>
   <body>
     <div class="container">
-      <div class="header"><a href="#"> <img src=" ../../img/Logo.svg" alt="vector"/></a>
+      <div class="header"><a href="./index.html"> <img src=" ../../img/Logo.svg" alt="vector"/></a>
         <div class="navigation-buttons">  
           <ul class="navigation"> 
             <li><a class="class-link" href="#">О нас</a></li>
@@ -752,7 +750,7 @@ input::-webkit-inner-spin-button {
             <li><a class="class-link" href="#">Новости</a></li>
             <li><a class="class-link dropdown" href="#">Соглашения</a></li>
           </ul>
-          <div class="buttons"><a href="#">
+          <div class="buttons"><a href="./signIn.html">
               <button class="to-come-in">Войти</button></a><a href="./signUp.html">
               <button class="register">Зарегистрироваться </button></a></div>
         </div>
@@ -860,200 +858,202 @@ input::-webkit-inner-spin-button {
           <div class="h2"> 
             <h2>Номера, которые мы для вас подобрали</h2>
           </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img1.jpg" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 888</p>
-                      <p class="luxe">Люкс</p>
-                      <p class="price">9990₽ в сутки</p>
+          <div class="card-numbers">
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img1.jpg" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
                     </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 888</p>
+                        <p class="luxe">Люкс</p>
+                        <p class="price">9990₽ в сутки</p>
                       </div>
-                      <p class="reviews">145 Отзывов</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img2.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 840</p>
-                      <p class="price">9900₽ в сутки</p>
-                    </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">145 Отзывов</p>
                       </div>
-                      <p class="reviews">65 Отзывов</p>
                     </div>
                   </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img3.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 980</p>
-                      <p class="luxe">Люкс</p>
-                      <p class="price">8500₽ в сутки</p>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img2.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
                     </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 840</p>
+                        <p class="price">9900₽ в сутки</p>
                       </div>
-                      <p class="reviews">35 Отзывов</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img4.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 856</p>
-                      <p class="price">7300₽ в сутки</p>
-                    </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">65 Отзывов</p>
                       </div>
-                      <p class="reviews">19 Отзывов</p>
                     </div>
                   </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img5.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 740</p>
-                      <p class="price">6000₽ в сутки</p>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img3.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
                     </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 980</p>
+                        <p class="luxe">Люкс</p>
+                        <p class="price">8500₽ в сутки</p>
                       </div>
-                      <p class="reviews">44 Отзывов</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img6.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 982</p>
-                      <p class="price">5800₽ в сутки</p>
-                    </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">35 Отзывов</p>
                       </div>
-                      <p class="reviews">56 Отзывов</p>
                     </div>
                   </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img7.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 678</p>
-                      <p class="price">5500₽ в сутки</p>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img4.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
                     </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 856</p>
+                        <p class="price">7300₽ в сутки</p>
                       </div>
-                      <p class="reviews">45 Отзывов</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img8.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 450</p>
-                      <p class="price">5300₽ в сутки</p>
-                    </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">19 Отзывов</p>
                       </div>
-                      <p class="reviews">39 Отзывов</p>
                     </div>
                   </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img9.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 350</p>
-                      <p class="price">5000₽ в сутки</p>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img5.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
                     </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 740</p>
+                        <p class="price">6000₽ в сутки</p>
                       </div>
-                      <p class="reviews">77 Отзывов</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img10.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 666</p>
-                      <p class="price">5000₽ в сутки</p>
-                    </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">44 Отзывов</p>
                       </div>
-                      <p class="reviews">25 Отзывов</p>
                     </div>
                   </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img11.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 444</p>
-                      <p class="price">5000₽ в сутки</p>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img6.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
                     </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 982</p>
+                        <p class="price">5800₽ в сутки</p>
                       </div>
-                      <p class="reviews">15 Отзывов</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-container">
-                  <div class="img-container"> <img src="../../img/img12.png" alt="alt"/>
-                    <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
-                  </div>
-                  <div class="card-bottom">
-                    <div class="card-info">
-                      <p class="number">№ 352</p>
-                      <p class="price">5000₽ в сутки</p>
-                    </div>
-                    <div class="card-review">
-                      <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">56 Отзывов</p>
                       </div>
-                      <p class="reviews">55 Отзывов</p>
                     </div>
                   </div>
-                </div>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img7.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
+                    </div>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 678</p>
+                        <p class="price">5500₽ в сутки</p>
+                      </div>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">45 Отзывов</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img8.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
+                    </div>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 450</p>
+                        <p class="price">5300₽ в сутки</p>
+                      </div>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">39 Отзывов</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img9.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
+                    </div>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 350</p>
+                        <p class="price">5000₽ в сутки</p>
+                      </div>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">77 Отзывов</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img10.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
+                    </div>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 666</p>
+                        <p class="price">5000₽ в сутки</p>
+                      </div>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">25 Отзывов</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img11.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
+                    </div>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 444</p>
+                        <p class="price">5000₽ в сутки</p>
+                      </div>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">15 Отзывов</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-container">
+                    <div class="img-container"> <img src="../../img/img12.png" alt="alt"/>
+                      <div class="span-container"><span class="circle-active"> </span><span class="circle-passive"></span><span class="circle-passive"></span><span class="circle-passive"></span></div>
+                    </div>
+                    <div class="card-bottom">
+                      <div class="card-info">
+                        <p class="number">№ 352</p>
+                        <p class="price">5000₽ в сутки</p>
+                      </div>
+                      <div class="card-review">
+                        <div class="card-stars"><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/><img src="../../img/star_border.svg" alt="alt"/>
+                        </div>
+                        <p class="reviews">55 Отзывов</p>
+                      </div>
+                    </div>
+                  </div>
+          </div>
         </div>
       </div>
       <div class="footer"> 
