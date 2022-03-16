@@ -1,9 +1,8 @@
 
 <html>
   <head>
-    <title> Авторизация</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+    <title>Номер</title>
+    <style>@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 .header {
   height: 70px;
@@ -244,53 +243,10 @@ li {
   margin: 26px 0;
 }
 
-.checkbox-component-container {
-  margin-bottom: 14px;
-  display: flex;
-  align-items: center;
-}
-.checkbox-component-container:first-child {
-  margin-top: 17px;
-}
-
-.checkbox-passive {
-  width: 20px;
-  height: 20px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
-  display: inline-block;
-  box-sizing: border-box;
-  flex-shrink: 0;
-  position: relative;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.checkbox-active {
-  border: 1px solid #BC9CFF;
-}
-.checkbox-active::after {
-  position: absolute;
-  top: 3px;
-  left: 5px;
-  content: "";
-  width: 5px;
-  height: 7px;
-  border-bottom: 2px solid #BC9CFF;
-  border-right: 2px solid #BC9CFF;
-  transform: rotate(40deg);
-}
-
-.one-may {
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.5);
-}
-
 button {
   padding: 0;
   border: none;
-  font-family: inherit;
+  font: inherit;
   color: inherit;
   background-color: transparent;
 }
@@ -312,217 +268,129 @@ p {
   margin: 0px;
 }
 
-.authorization {
-  background-image: url(../../img/signUp.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.image-container {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  box-sizing: border-box;
   width: 1440px;
-  height: min-content;
-  padding-top: 19px;
-  padding-bottom: 19px;
-  display: flex;
-  font-family: Montserrat;
-  margin: 0 auto;
 }
 
-.authorization-container {
+.information-container {
+  padding: 70px 140px 0px 140px;
+}
+
+.comfort {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   width: min-content;
-  height: min-content;
-  margin: 0 auto;
-  padding: 40px 30px 30px 30px;
-  background-color: white;
-  border-radius: 4px;
-  display: block;
-  align-items: center;
-  box-sizing: border-box;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
 
-.name {
+.convenience-location {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: min-content;
+  padding-bottom: 17px;
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
 }
 
-.email-password {
+.cosiness {
   display: flex;
-  flex-direction: column;
-  margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: min-content;
 }
 
-.account-registration-input {
-  width: 320px;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  box-sizing: border-box;
-  border-radius: 4px;
+.intelligence-impression-container {
+  display: flex;
+}
+
+.vote {
+  display: flex;
+}
+
+.rating-ul {
   text-align: left;
-  font-size: 14px;
-  line-height: 18px;
-  color: rgba(31, 32, 65, 0.25);
-  padding-left: 13px;
-}
-.account-registration-input:first-child {
-  margin-bottom: 10px;
 }
 
-.date-input {
-  font-size: 18px;
-  font-weight: 400;
-  font-family: Montserrat;
-}
-
-.special-offer {
-  text-align: left;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.register-container {
-  text-align: center;
-  margin-top: 24px;
-}
-
-.come-in-container {
-  text-align: right;
-}
-
-.gender {
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.5);
-  margin-bottom: 20px;
-}
-
-.men {
-  margin-right: 20px;
-}
-
-.input-radio {
-  width: 20px;
-  height: 20px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  box-sizing: border-box;
-  border-radius: 10px;
-  background-color: red;
-}
-
-.header-label {
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041;
-}
-
-.date-of-birth .account-registration-input {
-  margin-top: 5px;
-  margin-bottom: 0px;
-}
-
-.email-password .account-registration-input:first-child {
-  margin-top: 5px;
-}
-
-.container-radio {
-  margin-right: 10px;
-  width: 40px;
-  height: 20px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  box-sizing: border-box;
-  border-radius: 10px;
-  padding: 3px 24px 4px 4px;
-  position: relative;
-  cursor: pointer;
-}
-
-.radio {
-  width: 12px;
-  height: 12px;
-  background-color: rgba(31, 32, 65, 0.25);
-  border-radius: 10px;
-  position: absolute;
-}
-.radio-active {
-  border: 1px solid #BC9CFF;
-  left: 22px;
-  box-sizing: border-box;
-  background-color: #BC9CFF;
-}
-
-.register-button {
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  color: white;
-  text-align: center;
-  display: inline-block;
-  border-radius: 22px;
-  width: 320px;
-  height: 44px;
-  text-decoration: none;
-  border: none;
-  font-weight: bold;
-  font-family: Montserrat;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  align-items: center;
-  cursor: pointer;
-  letter-spacing: 0.5;
-  margin-bottom: 30px;
+.number-vote {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  border-top-color: #FFE39C;
+  border-left-color: #FFE39C;
+  border-right-color: #BC9CFF;
+  border-bottom-color: #6FCF97;
+  transform: rotate(316deg);
   position: relative;
 }
-.register-button::after {
+.number-vote::after {
   position: absolute;
-  content: url("../../img/arrow_forward_white.svg");
-  width: 44px;
-  height: 44px;
-  transform: rotate(360deg);
-  right: 0;
-  top: 13px;
-  cursor: pointer;
-}
-
-.to-come-in-button {
+  content: "";
+  top: 14px;
+  left: 102px;
+  width: 4px;
+  height: 4px;
   background-color: white;
-  color: #BC9CFF;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 22px;
-  border: 2px solid #BC9CFF;
-  width: 99px;
-  height: 44px;
-  font-weight: bold;
-  font-family: Montserrat;
-  font-size: 12px;
-  line-height: 15px;
-  cursor: pointer;
-  text-transform: uppercase;
+  transform: rotate(316deg);
+}
+.number-vote::before {
+  position: absolute;
+  content: "";
+  top: 103px;
+  left: 14px;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  transform: rotate(316deg);
 }
 
-.account-available {
-  font-size: 14px;
-  line-height: 18px;
-  color: black;
+.pseudo-element {
+  position: absolute;
+  top: 104px;
+  left: 100px;
+  width: 4px;
+  height: 4px;
+  background-color: white;
+  transform: rotate(316deg);
 }
 
-.come-in {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-register {
-  font-weight: bold;
+.number {
+  position: absolute;
+  top: 41px;
+  left: 46px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
   font-size: 24px;
   line-height: 29px;
-  color: #1F2041;
-  margin-bottom: 20px;
-}.authorization {
-  padding-top: 172px;
-  padding-bottom: 172px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #BC9CFF;
+  transform: rotate(44deg);
+}
+
+.voice {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 64px;
+  left: 19px;
+  transform: rotate(44deg);
+  color: #BC9CFF;
 }
     </style>
   </head>
@@ -542,23 +410,54 @@ p {
               <button class="register">Зарегистрироваться </button></a></div>
         </div>
       </div>
-      <div class="authorization">
-        <div class="authorization-container">
-          <p class="header-register">Войти</p>
-          <div class="email-password"> 
-            <label class="header-label">
-              <input class="account-registration-input" type="text" placeholder="Email"/>
-              <input class="account-registration-input" type="text" placeholder="Пароль"/>
-            </label>
+      <div class="image-container">
+        <div class="img-one"><img src="../../img/number1.png" alt="1"/></div>
+        <div class="img-two"><img src="../../img/number3.png" alt="3"/><img src="../../img/number2.png" alt="2"/></div>
+      </div>
+      <div class="information-container">
+        <div class="details-number">
+          <div class="intelligence-impression-container">
+            <div class="intelligence-number">Сведения о номере
+              <div class="comfort">
+                <div class="img-intelligence-number"><img src="../../img/comfort.svg" alt="comfort"/></div>
+                <p class="headline">Комфорт </p>
+                <p class="description">Шумопоглощающие стены</p>
+              </div>
+              <div class="convenience-location">
+                <div class="img-intelligence-number"><img src="../../img/convenience of location.svg" alt="convenience of location"/></div>
+                <p class="headline">Удобство </p>
+                <p class="description">Окно в каждой из спален</p>
+              </div>
+              <div class="cosiness">
+                <div class="img-intelligence-number"><img src="../../img/cosiness.svg" alt="cosiness"/></div>
+                <p class="headline">Уют </p><br>
+                <p class="description">Номер оснащён камином</p>
+              </div>
+            </div>
+            <div class="impression-number">Впечатления от номера
+              <div class="vote"> 
+                <div class="number-vote">
+                  <p class="number">260</p>
+                  <p class="voice">голосов</p><span class="pseudo-element"> </span>
+                </div>
+                <div class="rating-vote">
+                  <ul class="rating-ul"> 
+                    <li>Великолепно</li>
+                    <li>Хорошо</li>
+                    <li>Удовлетворительно</li>
+                    <li>Разочарован</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="register-container"><a href="#">
-              <button class="register-button">Войти</button></a></div>
-          <div class="come-in">
-            <div class="account-available">Нет аккаунта на Toxin?</div>
-            <div class="come-in-container"><a href="#">
-                <button class="to-come-in-button">Создать</button></a></div>
+          <div class="reviews-number"></div>
+          <div class="regulations-cancellation-container"> 
+            <div class="regulations"></div>
+            <div class="cancellation"></div>
           </div>
         </div>
+        <div class="price-number"> </div>
       </div>
       <div class="footer"> 
         <div class="nav-footer">
@@ -601,7 +500,7 @@ p {
           <div class="socialnetwork"><a href="https://twitter.com"><img src=" ../../img/twitter.svg" alt="twitter"/></a><a href="https://facebook.com"><img src=" ../../img/facebook.svg" alt="facebook"/></a><a href="https://instagram.com"><img src=" ../../img/insta.svg" alt="insta"/></a></div>
         </div>
       </div>
-      <script src="../scripts/signUp.js"></script>
+      <script src="../scripts/number.js"></script>
     </div>
   </body>
 </html>

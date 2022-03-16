@@ -1,0 +1,59 @@
+extends ../layout/default.pug
+
+block title
+    title Номер
+
+block styles
+    style
+      include ../styles/pages/dist/number.css
+
+block scripts 
+    script(src='../scripts/number.js')
+
+block content
+    .image-container
+        .img-one
+            img(src="../../img/number1.png", alt="1")
+        .img-two
+            img(src="../../img/number3.png", alt="3")
+            img(src="../../img/number2.png", alt="2")
+    .information-container
+        .details-number
+            .intelligence-impression-container
+                .intelligence-number Сведения о номере
+                    .comfort
+                        .img-intelligence-number
+                            img(src="../../img/comfort.svg", alt="comfort")
+                        p.headline Комфорт 
+                        //- <br>
+                        p.description Шумопоглощающие стены
+                    .convenience-location
+                        .img-intelligence-number
+                            img(src="../../img/convenience of location.svg", alt="convenience of location")
+                        p.headline Удобство 
+                        //- <br>
+                        p.description Окно в каждой из спален
+                    .cosiness
+                        .img-intelligence-number
+                            img(src="../../img/cosiness.svg", alt="cosiness")
+                        p.headline Уют 
+                        <br>
+                        p.description Номер оснащён камином
+                .impression-number Впечатления от номера
+                    .vote 
+                        .number-vote
+                            p.number 260
+                            p.voice голосов
+                            span.pseudo-element 
+                        .rating-vote
+                            ul.rating-ul 
+                                li Великолепно
+                                li Хорошо
+                                li Удовлетворительно
+                                li Разочарован
+
+            .reviews-number
+            .regulations-cancellation-container 
+                .regulations
+                .cancellation
+        .price-number 
