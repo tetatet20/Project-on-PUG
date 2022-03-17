@@ -251,6 +251,10 @@ button {
   background-color: transparent;
 }
 
+h3 {
+  margin: 0px;
+}
+
 li {
   list-style-type: none;
 }
@@ -278,31 +282,56 @@ p {
 
 .information-container {
   padding: 70px 140px 0px 140px;
+  display: flex;
+  color: rgba(31, 32, 65, 0.75);
+  font-family: "Montserrat";
+  line-height: 24px;
+  font-size: 14px;
 }
 
 .comfort {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: min-content;
+  width: max-content;
   padding-bottom: 17px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  margin-top: 20px;
+}
+
+.title-h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: #1F2041;
+  margin-bottom: 20px;
 }
 
 .convenience-location {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: min-content;
+  width: max-content;
   padding-bottom: 17px;
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  margin-top: 23px;
 }
 
 .cosiness {
+  margin-top: 23px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: min-content;
+  width: max-content;
+}
+
+.headline {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.description {
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .intelligence-impression-container {
@@ -318,6 +347,7 @@ p {
 }
 
 .number-vote {
+  margin-right: 40px;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -392,6 +422,323 @@ p {
   transform: rotate(44deg);
   color: #BC9CFF;
 }
+
+.fabulous {
+  position: relative;
+}
+.fabulous::before {
+  position: absolute;
+  top: 4px;
+  left: -13px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+}
+
+.good {
+  position: relative;
+}
+.good::before {
+  position: absolute;
+  top: 4px;
+  left: -13px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+
+.satisfactorily {
+  position: relative;
+}
+.satisfactorily::before {
+  position: absolute;
+  top: 4px;
+  left: -13px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+.disappointed {
+  position: relative;
+}
+.disappointed::before {
+  position: absolute;
+  top: 4px;
+  left: -13px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+}
+
+.reviews-number {
+  margin-top: 30px;
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review1 {
+  display: flex;
+  flex-direction: column;
+}
+.review1:first-child {
+  margin-bottom: 23px;
+}
+.review1:last-child {
+  margin-bottom: 30px;
+}
+
+.review1-author {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.review1-comment {
+  display: flex;
+}
+
+.likes {
+  margin-right: 14px;
+  width: 39.72px;
+  height: 20px;
+  border: 2px solid red;
+}
+
+.author-name {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.author-name-number-days {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.regulations-cancellation-container {
+  display: flex;
+  margin-left: 20px;
+  width: max-content;
+}
+
+.cancellation {
+  margin-left: 100px;
+}
+
+.before-gray {
+  position: relative;
+}
+.before-gray::before {
+  position: absolute;
+  top: 4px;
+  left: -20px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(31, 32, 65, 0.25);
+}
+
+.price-number {
+  width: min-content;
+  height: min-content;
+  margin: 0 auto;
+  padding: 40px 30px 30px 30px;
+  background-color: white;
+  border-radius: 4px;
+  display: block;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  margin-left: 70px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.arrival-departure {
+  width: 150px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  padding: 8px 0px 8px 15px;
+  margin-top: 5px;
+}
+.arrival-departure-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.dropdown-calendar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+.dropdown-calendar::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(315deg);
+  right: 15px;
+  top: 37px;
+}
+
+.guests {
+  position: relative;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.guests::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(315deg);
+  right: 15px;
+  top: 37px;
+}
+.guests-input {
+  width: 320px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  padding: 13px 193px 13px 15px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.guests-input:focus {
+  outline: none;
+}
+
+.selection {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: white;
+  text-align: center;
+  display: inline-block;
+  border-radius: 22px;
+  width: 320px;
+  height: 44px;
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 31px;
+  letter-spacing: 1;
+  position: relative;
+}
+.selection::after {
+  position: absolute;
+  content: url("../../img/arrow_forward_white.svg");
+  width: 44px;
+  height: 44px;
+  transform: rotate(360deg);
+  right: 0;
+  top: 13px;
+  cursor: pointer;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-calculation-number {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.discount {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.additional-services {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.impression-number {
+  margin-left: 82px;
+}
+
+.container-intelligence-number {
+  display: block;
+  margin-left: 15px;
+}
+
+.number-attributes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.number-luxury {
+  display: flex;
+}
+
+.price-per-day {
+  display: flex;
+}
+
+.numeric-number {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+}
     </style>
   </head>
   <body>
@@ -417,24 +764,32 @@ p {
       <div class="information-container">
         <div class="details-number">
           <div class="intelligence-impression-container">
-            <div class="intelligence-number">Сведения о номере
+            <div class="intelligence-number"> 
+              <h3 class="title-h3">Сведения о номере</h3>
               <div class="comfort">
                 <div class="img-intelligence-number"><img src="../../img/comfort.svg" alt="comfort"/></div>
-                <p class="headline">Комфорт </p>
-                <p class="description">Шумопоглощающие стены</p>
+                <div class="container-intelligence-number">
+                  <p class="headline">Комфорт </p>
+                  <p class="description">Шумопоглощающие стены</p>
+                </div>
               </div>
               <div class="convenience-location">
                 <div class="img-intelligence-number"><img src="../../img/convenience of location.svg" alt="convenience of location"/></div>
-                <p class="headline">Удобство </p>
-                <p class="description">Окно в каждой из спален</p>
+                <div class="container-intelligence-number">   
+                  <p class="headline">Удобство </p>
+                  <p class="description">Окно в каждой из спален</p>
+                </div>
               </div>
               <div class="cosiness">
                 <div class="img-intelligence-number"><img src="../../img/cosiness.svg" alt="cosiness"/></div>
-                <p class="headline">Уют </p><br>
-                <p class="description">Номер оснащён камином</p>
+                <div class="container-intelligence-number">
+                  <p class="headline">Уют </p>
+                  <p class="description">Номер оснащён камином</p>
+                </div>
               </div>
             </div>
-            <div class="impression-number">Впечатления от номера
+            <div class="impression-number"> 
+              <h3 class="title-h3">Впечатления от номера</h3>
               <div class="vote"> 
                 <div class="number-vote">
                   <p class="number">260</p>
@@ -442,22 +797,104 @@ p {
                 </div>
                 <div class="rating-vote">
                   <ul class="rating-ul"> 
-                    <li>Великолепно</li>
-                    <li>Хорошо</li>
-                    <li>Удовлетворительно</li>
-                    <li>Разочарован</li>
+                    <li class="fabulous">Великолепно</li>
+                    <li class="good">Хорошо</li>
+                    <li class="satisfactorily">Удовлетворительно</li>
+                    <li class="disappointed">Разочарован</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="reviews-number"></div>
+          <div class="reviews-number">
+            <div class="title-review">
+              <h3 class="title-h3">Отзывы посетителей номера</h3>
+              <p>2 отзыва</p>
+            </div>
+            <div class="reviews"> 
+              <div class="review1">   
+                <div class="review1-author"><img class="img-style" src="../../img/author1.png" alt="author1"/>
+                  <div class="author-name-number-days">
+                    <p class="author-name">Мурад Сарафанов</p>
+                    <p class="number-days">5 дней назад</p>
+                  </div>
+                </div>
+                <div class="review1-comment">
+                  <div class="likes"></div>
+                  <p class="comment">Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий.<br> И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто <br> не жаловался из соседей.</p>
+                </div>
+              </div>
+              <div class="review1">
+                <div class="review1-author"><img class="img-style" src="../../img/author2.png" alt="author2"/>
+                  <div class="author-name-number-days">
+                    <p class="author-name">Патрисия Стёклышкова</p>
+                    <p class="number-days">Неделю назад</p>
+                  </div>
+                </div>
+                <div class="review1-comment">
+                  <div class="likes"></div>
+                  <p class="comment">Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, <br> каждый день новое блюдо и десерт как комплимент</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="regulations-cancellation-container"> 
-            <div class="regulations"></div>
-            <div class="cancellation"></div>
+            <div class="regulations">
+              <h3 class="title-h3">Правила</h3>
+              <ul> 
+                <li class="before-gray">Нельзя с питомцами</li>
+                <li class="before-gray"> Без вечеринок и мероприятий</li>
+                <li class="before-gray"> Время прибытия — после 13:00, <br> а выезд до 12:00</li>
+              </ul>
+            </div>
+            <div class="cancellation">
+              <h3 class="title-h3">Отмена</h3>
+              <p>Бесплатная отмена в течение 48 ч. После <br> этого при отмене не позднее чем за 5 дн. до <br> прибытия вы получите полный возврат за <br> вычетом сбора за услуги.</p>
+            </div>
           </div>
         </div>
-        <div class="price-number"> </div>
+        <div class="price-number"> 
+          <div class="number-attributes"> 
+            <div class="number-luxury">
+              <p class="numeric-number">№888     </p>
+              <p class="luxury">ЛЮКС</p>
+            </div>
+            <div class="price-per-day">
+              <p class="price">9900₽</p>
+              <p class="day">в сутки</p>
+            </div>
+          </div>
+          <div class="arrival-departure-container">
+            <label class="dropdown-calendar">Прибытие
+              <input class="arrival-departure" type="text" value="ДД.ММ.ГГГГ"/>
+            </label>
+            <label class="dropdown-calendar">Выезд
+              <input class="arrival-departure" type="text" value="ДД.ММ.ГГГГ"/>
+            </label>
+          </div>
+          <label class="guests">Гости
+            <input class="guests-input" type="text" value="Сколько гостей" readonly="readonly"/>
+          </label>
+          <div class="price-calculation">
+            <div class="price-calculation-number"> 
+              <p>9 990₽ х 4 суток</p>
+              <p>39 960₽</p>
+            </div>
+            <div class="discount">
+              <p>Сбор за услуги: скидка 2 179₽</p>
+              <p>0₽</p>
+            </div>
+            <div class="additional-services">
+              <p>Сбор за дополнительные услуги</p>
+              <p>300₽</p>
+            </div>
+            <div class="total"> 
+              <p class="title-h3">Итого</p>
+              <p class="title-h3">38081₽</p>
+            </div>
+          </div>
+          <button class="selection">Забронировать</button>
+        </div>
       </div>
       <div class="footer"> 
         <div class="nav-footer">
