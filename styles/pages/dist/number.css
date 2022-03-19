@@ -510,11 +510,55 @@ p {
   display: flex;
 }
 
-.likes {
+.likes-passive {
+  padding: 1px 4px;
   margin-right: 14px;
   width: 39.72px;
   height: 20px;
-  border: 2px solid red;
+  background: #FFFFFF;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.likes-active {
+  padding: 1px 4px;
+  margin-right: 14px;
+  width: 39.72px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 1px solid #BC9CFF;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.heart {
+  width: 50%;
+  height: 50%;
+  background-image: url("../../img/heart-passive.svg");
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.heart-active {
+  background-image: url("../../img/heart-active.svg");
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 50%;
+  height: 50%;
+}
+
+.number-hearts {
+  font-size: 12px;
+  text-align: left;
+  color: rgba(31, 32, 65, 0.25);
 }
 
 .author-name {
@@ -667,7 +711,7 @@ p {
   text-transform: uppercase;
   align-items: center;
   cursor: pointer;
-  margin-top: 31px;
+  margin-top: 20px;
   letter-spacing: 1;
   position: relative;
 }
@@ -685,6 +729,22 @@ p {
 .total {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.total::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 64px;
+  height: 1px;
+  width: 180px;
+  border: 1px dashed rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+}
+
+.total .title-h3 {
+  margin-bottom: 0;
 }
 
 .price-calculation-number {
@@ -718,6 +778,7 @@ p {
 .number-attributes {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .number-luxury {
@@ -732,6 +793,28 @@ p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 17px;
+  color: #1F2041;
+}
+
+.luxury {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  color: #BC9CFF;
+  margin-left: 8px;
+  align-items: center;
+  display: flex;
+}
+
+.price {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  margin-right: 5px;
 }
