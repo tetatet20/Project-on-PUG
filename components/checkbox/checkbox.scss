@@ -1,0 +1,45 @@
+$grey-50: rgba(31, 32, 65, .5);
+$grey-25: rgba(31, 32, 65, .25);
+
+.checkbox-component-container {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    &:first-child {
+        margin-top: 17px;}
+}
+
+.checkbox-passive {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $grey-25;
+    border-radius: 4px; 
+    display: inline-block;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.checkbox-active {
+    border: 1px solid #BC9CFF;
+
+    &::after {
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        content: '';
+        width: 5px;
+        height: 7px;
+        border-bottom: 2px solid #BC9CFF;
+        border-right: 2px solid #BC9CFF;
+        transform: rotate(40deg);
+    }
+}
+
+.one-may {
+    font-size: 14px;
+    line-height: 18px;
+    color: $grey-50;
+}
