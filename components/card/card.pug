@@ -1,7 +1,8 @@
 mixin card(img, number, isLuxe, price, stars, reviews)
     .card-container
-        .img-container 
-            img(src=img, alt="alt")
+        .img-container
+            a(href="../../pages/dist/number.html") 
+                img(src=img, alt="alt")
             .span-container
                 span.circle-active 
                 span.circle-passive
