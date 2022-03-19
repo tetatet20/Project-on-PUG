@@ -1,7 +1,7 @@
 
 <html>
   <head>
-    <title>Главная страница</title>
+    <title> Регистрация</title>
     <style>@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 .header {
@@ -243,10 +243,53 @@ li {
   margin: 26px 0;
 }
 
+.checkbox-component-container {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+}
+.checkbox-component-container:first-child {
+  margin-top: 17px;
+}
+
+.checkbox-passive {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  display: inline-block;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.checkbox-active {
+  border: 1px solid #BC9CFF;
+}
+.checkbox-active::after {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  content: "";
+  width: 5px;
+  height: 7px;
+  border-bottom: 2px solid #BC9CFF;
+  border-right: 2px solid #BC9CFF;
+  transform: rotate(40deg);
+}
+
+.one-may {
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.5);
+}
+
 button {
   padding: 0;
   border: none;
-  font: inherit;
+  font-family: inherit;
   color: inherit;
   background-color: transparent;
 }
@@ -268,141 +311,147 @@ p {
   margin: 0px;
 }
 
-.container {
-  width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  align-items: center;
-}
-
-.content {
-  background-image: url(../../img/background.png);
+.authorization {
+  background-image: url(../../img/signUp.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 1440px;
-  height: 830px;
+  height: min-content;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  display: flex;
+  font-family: Montserrat;
   margin: 0 auto;
 }
 
-.number-selection {
-  width: 380px;
-  height: 380px;
-  background-color: white;
-  margin-top: 70px;
-  margin-left: 140px;
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
+.authorization-container {
+  width: min-content;
+  height: min-content;
+  margin: 0 auto;
   padding: 40px 30px 30px 30px;
-  box-sizing: border-box;
-}
-
-.caption {
-  margin-right: 134px;
-  text-align: right;
-  margin-top: 320px;
-  font-family: Montserrat;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
-}
-
-.arrival-departure {
-  width: 150px;
-  height: 44px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  background-color: white;
   border-radius: 4px;
+  display: block;
+  align-items: center;
   box-sizing: border-box;
-  font-family: Montserrat;
-  padding: 8px 0px 8px 15px;
-  margin-top: 5px;
-}
-.arrival-departure-container {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
 }
 
-.number-selection p {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-  color: #1F2041;
-  margin-bottom: 21px;
-  font-family: Montserrat;
-}
-
-.dropdown-calendar {
+.name {
   display: flex;
   flex-direction: column;
-  position: relative;
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041;
-}
-.dropdown-calendar::after {
-  position: absolute;
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
-  border-left: 2px solid rgba(31, 32, 65, 0.5);
-  transform: rotate(315deg);
-  right: 15px;
-  top: 37px;
+  margin-bottom: 10px;
 }
 
-.dropdown-calendar:first-child {
-  margin-right: 20px;
+.email-password {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
-.guests {
-  position: relative;
-  font-family: Montserrat;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1F2041;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.guests::after {
-  position: absolute;
-  content: "";
-  width: 6px;
-  height: 6px;
-  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
-  border-left: 2px solid rgba(31, 32, 65, 0.5);
-  transform: rotate(315deg);
-  right: 15px;
-  top: 37px;
-}
-.guests-input {
+.account-registration-input {
   width: 320px;
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 4px;
   box-sizing: border-box;
-  font-family: Montserrat;
-  padding: 13px 193px 13px 15px;
-  margin-top: 5px;
-  cursor: pointer;
+  border-radius: 4px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(31, 32, 65, 0.25);
+  padding-left: 13px;
 }
-.guests-input:focus {
-  outline: none;
+.account-registration-input:first-child {
+  margin-bottom: 10px;
 }
 
-.selection {
+.date-input {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: Montserrat;
+}
+
+.special-offer {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.register-container {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.come-in-container {
+  text-align: right;
+}
+
+.gender {
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.5);
+  margin-bottom: 20px;
+}
+
+.men {
+  margin-right: 20px;
+}
+
+.input-radio {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: red;
+}
+
+.header-label {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+}
+
+.date-of-birth .account-registration-input {
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.email-password .account-registration-input:first-child {
+  margin-top: 5px;
+}
+
+.container-radio {
+  margin-right: 10px;
+  width: 40px;
+  height: 20px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 3px 24px 4px 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.radio {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(31, 32, 65, 0.25);
+  border-radius: 10px;
+  position: absolute;
+}
+.radio-active {
+  border: 1px solid #BC9CFF;
+  left: 22px;
+  box-sizing: border-box;
+  background-color: #BC9CFF;
+}
+
+.register-button {
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
   color: white;
   text-align: center;
@@ -419,11 +468,11 @@ p {
   text-transform: uppercase;
   align-items: center;
   cursor: pointer;
-  margin-top: 31px;
-  letter-spacing: 1;
+  letter-spacing: 0.5;
+  margin-bottom: 30px;
   position: relative;
 }
-.selection::after {
+.register-button::after {
   position: absolute;
   content: url("../../img/arrow_forward_white.svg");
   width: 44px;
@@ -434,67 +483,42 @@ p {
   cursor: pointer;
 }
 
-.dropdown-menu {
-  z-index: 2;
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  display: none;
-  width: 320px;
-  height: 160px;
+.to-come-in-button {
   background-color: white;
-  text-align: left;
-  padding: 13px 10px 13px 15px;
-  font-family: Montserrat;
+  color: #BC9CFF;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 22px;
+  border: 2px solid #BC9CFF;
+  width: 99px;
+  height: 44px;
   font-weight: bold;
+  font-family: Montserrat;
   font-size: 12px;
   line-height: 15px;
-  border: 1px solid rgba(31, 32, 65, 0.5);
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-.dropdown-menu-show {
-  display: block;
-}
-
-.dropdown-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 92px;
-  align-items: center;
-}
-
-.age {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 7px;
-  align-items: center;
-}
-
-.clean-apply {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 19px;
-}
-.clean-apply-button {
-  color: #BC9CFF;
   cursor: pointer;
   text-transform: uppercase;
 }
 
-.round-button {
-  color: rgba(31, 32, 65, 0.5);
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  border-radius: 22px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  flex-shrink: 0;
+.account-available {
+  font-size: 14px;
+  line-height: 18px;
+  color: black;
+}
+
+.come-in {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  box-sizing: border-box;
-  padding: 6px 6px;
-  cursor: pointer;
+}
+
+.header-register {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #1F2041;
+  margin-bottom: 20px;
 }
     </style>
   </head>
@@ -514,38 +538,48 @@ p {
               <button class="register">Зарегистрироваться </button></a></div>
         </div>
       </div>
-      <div class="content">
-        <div class="number-selection">
-          <p>Найдем номера под<br>ваши пожелания</p>
-          <div class="arrival-departure-container">
-            <label class="dropdown-calendar">Прибытие
-              <input class="arrival-departure" type="text" value="ДД.ММ.ГГГГ"/>
+      <div class="authorization">
+        <div class="authorization-container">
+          <p class="header-register">Регистрация аккаунта</p>
+          <div class="name">
+            <label>
+              <input class="account-registration-input" type="email" placeholder="Имя"/>
             </label>
-            <label class="dropdown-calendar">Выезд
-              <input class="arrival-departure" type="text" value="ДД.ММ.ГГГГ"/>
+            <label>
+              <input class="account-registration-input" type="text" placeholder="Фамилия"/>
             </label>
           </div>
-          <label class="guests">Гости
-            <input class="guests-input" type="text" value="Сколько гостей" readonly="readonly"/>
-            <div class="dropdown-menu">
-              <div class="age">Взрослые
-                <div class="dropdown-buttons"><span class="round-button adults-minus" data-button="adult-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="adult-plus">+</span></div>
-              </div>
-              <div class="age">Дети
-                <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="childrens-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="childrens-plus">+</span></div>
-              </div>
-              <div class="age">Младенцы
-                <div class="dropdown-buttons"><span class="round-button babies-minus" data-button="babies-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus" data-button="babies-plus">+</span></div>
-              </div>
-              <div class="clean-apply">
-                <button class="clean-apply-button clean">Очистить</button>
-                <button class="clean-apply-button apply">Применить</button>
-              </div>
-            </div><a href="./numbers.html">
-              <button class="selection">Подобрать номер</button></a>
-          </label>
+          <div class="gender">
+            <input class="input-radio" type="radio" name="gender" id="men"/>
+            <label class="men" for="men">Мужчина</label>
+            <input class="input-radio" type="radio" name="gender" id="woomen"/>
+            <label for="woomen">Женщина</label>
+          </div>
+          <div class="date-of-birth">
+            <label class="header-label"> Дата рождения
+              <input class="account-registration-input date-input" type="date" placeholder="ДД.ММ.ГГГГ"/>
+            </label>
+          </div>
+          <div class="email-password"> 
+            <label class="header-label">Данные для входа в сервис
+              <input class="account-registration-input" type="text" placeholder="Email"/>
+              <input class="account-registration-input" type="text" placeholder="Пароль"/>
+            </label>
+          </div>
+          <div class="special-offer">
+            <div class="container-radio"> 
+              <div class="radio"></div>
+            </div>
+            <p>Получать спецпредложения</p>
+          </div>
+          <div class="register-container"><a href="#">
+              <button class="register-button">Зарегистрироваться</button></a></div>
+          <div class="come-in">
+            <div class="account-available">Уже есть аккаунт на Toxin</div>
+            <div class="come-in-container"><a href="#">
+                <button class="to-come-in-button">Войти</button></a></div>
+          </div>
         </div>
-        <p class="caption">Лучшие номера для вашей работы,<br>отдыха и просто вдохновения</p>
       </div>
       <div class="footer"> 
         <div class="nav-footer">
@@ -588,7 +622,7 @@ p {
           <div class="socialnetwork"><a href="https://twitter.com"><img src=" ../../img/twitter.svg" alt="twitter"/></a><a href="https://facebook.com"><img src=" ../../img/facebook.svg" alt="facebook"/></a><a href="https://instagram.com"><img src=" ../../img/insta.svg" alt="insta"/></a></div>
         </div>
       </div>
-      <script src="../scripts/index.js"></script>
+      <script src="../scripts/signUp.js"></script>
     </div>
   </body>
 </html>

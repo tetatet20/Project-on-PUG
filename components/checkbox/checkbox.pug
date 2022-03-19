@@ -1,5 +1,11 @@
-mixin checkbox(text)
+mixin checkbox(text, small, moreText)
     .checkbox-component-container
-        .checkbox-passive
-        p.one-may=text
+        if small
+            .checkbox-passive
+            p.one-may=text
+        else    
+            .availability-checkbox
+                .checkbox-passive
+                p.caption-checkbox=text
+                p.explanation=moreText
 
