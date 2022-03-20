@@ -8,31 +8,34 @@ block styles
       include ../styles/pages/dist/numbers.css
 
 block scripts 
-    script(src='../scripts/numbers.js')
+    //- script(src='../scripts/numbers.js')
     script(src="../../components/checkbox/checkbox.js")
+    script(src='../../components/dropdown/dropdown.js')
 
 block content
     include ../components/checkbox/checkbox.pug
     include ../components/card/card.pug
+    include ../components/dropdown/dropdown.pug
     .conteiner
         .button-menu
             label.title-text.arrow-date-guests Даты пребывания в отеле
                 input.date-guests.date-stay(type="text" value="19 авг - 23 авг" readonly)
-            label.title-text.arrow-date-guests Гости
-                input.date-guests.number-guests(type="text" value="3 гостя, 1 младенец" readonly)
+            +dropdown()
+            //- label.title-text.arrow-date-guests Гости
+            //-     input.date-guests.number-guests(type="text" value="3 гостя, 1 младенец" readonly)
 
-                .filtres 
-                    .filtres_item.filtres_price 
-                        h3.filtres_price_title Цена
-                        input.slider(type="range" min="0" max="1000000" step="100")
-                        .filtres_price_slider 
-                        .filtres_price_inputs
-                            label.filtres_price_label(for="") 
-                                input.filtres_price_input(type="number"  min="0" value="0")
-                                span р
-                            label.filtres_price_label(for="") 
-                                input.filtres_price_input(type="number"  min="0" value="5000")
-                                span р
+            .filtres 
+                .filtres_item.filtres_price 
+                    h3.filtres_price_title Цена
+                    input.slider(type="range" min="0" max="1000000" step="100")
+                    .filtres_price_slider 
+                    .filtres_price_inputs
+                        label.filtres_price_label(for="") 
+                            input.filtres_price_input(type="number"  min="0" value="0")
+                            span р
+                        label.filtres_price_label(for="") 
+                            input.filtres_price_input(type="number"  min="0" value="5000")
+                            span р
             p.price-range Стоимость за сутки пребывания в номере
             .checkbox
                 p.title-text Правила дома

@@ -2,6 +2,7 @@
 @import "../components/footer.scss";
 @import "../../components/checkbox/checkbox.scss";
 @import "../../components/card/card.scss";
+@import "../../components/dropdown/dropdown.scss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
@@ -197,9 +198,9 @@ h2 {
         }
 }
 
-.number-guests {
-    margin-bottom: 30px;
-}
+// .number-guests {
+//     margin-bottom: 30px;
+// }
 
 .price-range {
     margin-bottom: 30px;

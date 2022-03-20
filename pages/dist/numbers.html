@@ -4,6 +4,8 @@
     <title>Номера</title>
     <style>@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 .header {
   height: 70px;
   width: 100%;
@@ -429,6 +431,167 @@ li {
 button {
   padding: 0;
   border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+.guests {
+  position: relative;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.guests::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+  border-left: 2px solid rgba(31, 32, 65, 0.5);
+  transform: rotate(315deg);
+  right: 15px;
+  top: 37px;
+}
+.guests-input {
+  width: 320px;
+  height: 44px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  padding: 13px 193px 13px 15px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.guests-input:focus {
+  outline: none;
+}
+
+.selection {
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  color: white;
+  text-align: center;
+  display: inline-block;
+  border-radius: 22px;
+  width: 320px;
+  height: 44px;
+  text-decoration: none;
+  border: none;
+  font-weight: bold;
+  font-family: Montserrat;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 31px;
+  letter-spacing: 1;
+  position: relative;
+}
+.selection::after {
+  position: absolute;
+  content: url("../../img/arrow_forward_white.svg");
+  width: 44px;
+  height: 44px;
+  transform: rotate(360deg);
+  right: 0;
+  top: 13px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  z-index: 2;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  display: none;
+  width: 320px;
+  height: 160px;
+  background-color: white;
+  text-align: left;
+  padding: 13px 10px 13px 15px;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.dropdown-menu-show {
+  display: block;
+}
+
+.dropdown-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 92px;
+  align-items: center;
+}
+
+.age {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+  align-items: center;
+}
+
+.clean-apply {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 19px;
+}
+.clean-apply-button {
+  color: #BC9CFF;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.round-button {
+  color: rgba(31, 32, 65, 0.5);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 22px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  flex-shrink: 0;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 6px 6px;
+  cursor: pointer;
+}
+
+button {
+  padding: 0;
+  border: none;
   font-family: inherit;
   color: inherit;
   background-color: transparent;
@@ -616,10 +779,6 @@ h2 {
   cursor: pointer;
 }
 
-.number-guests {
-  margin-bottom: 30px;
-}
-
 .price-range {
   margin-bottom: 30px;
   font-size: 12px;
@@ -760,24 +919,39 @@ input::-webkit-inner-spin-button {
           <label class="title-text arrow-date-guests">Даты пребывания в отеле
             <input class="date-guests date-stay" type="text" value="19 авг - 23 авг" readonly="readonly"/>
           </label>
-          <label class="title-text arrow-date-guests">Гости
-            <input class="date-guests number-guests" type="text" value="3 гостя, 1 младенец" readonly="readonly"/>
-            <div class="filtres"> 
-              <div class="filtres_item filtres_price"> 
-                <h3 class="filtres_price_title">Цена</h3>
-                <input class="slider" type="range" min="0" max="1000000" step="100"/>
-                <div class="filtres_price_slider"> </div>
-                <div class="filtres_price_inputs">
-                  <label class="filtres_price_label" for=""> 
-                    <input class="filtres_price_input" type="number" min="0" value="0"/><span>р</span>
-                  </label>
-                  <label class="filtres_price_label" for=""> 
-                    <input class="filtres_price_input" type="number" min="0" value="5000"/><span>р</span>
-                  </label>
-                </div>
+                <label class="guests">Гости
+                  <input class="guests-input" type="text" value="Сколько гостей" readonly="readonly"/>
+                  <div class="dropdown-menu">
+                    <div class="age">Взрослые
+                      <div class="dropdown-buttons"><span class="round-button adults-minus" data-button="adult-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="adult-plus">+</span></div>
+                    </div>
+                    <div class="age">Дети
+                      <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="childrens-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="childrens-plus">+</span></div>
+                    </div>
+                    <div class="age">Младенцы
+                      <div class="dropdown-buttons"><span class="round-button babies-minus" data-button="babies-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus" data-button="babies-plus">+</span></div>
+                    </div>
+                    <div class="clean-apply">
+                      <button class="clean-apply-button clean">Очистить</button>
+                      <button class="clean-apply-button apply">Применить</button>
+                    </div>
+                  </div>
+                </label>
+          <div class="filtres"> 
+            <div class="filtres_item filtres_price"> 
+              <h3 class="filtres_price_title">Цена</h3>
+              <input class="slider" type="range" min="0" max="1000000" step="100"/>
+              <div class="filtres_price_slider"> </div>
+              <div class="filtres_price_inputs">
+                <label class="filtres_price_label" for=""> 
+                  <input class="filtres_price_input" type="number" min="0" value="0"/><span>р</span>
+                </label>
+                <label class="filtres_price_label" for=""> 
+                  <input class="filtres_price_input" type="number" min="0" value="5000"/><span>р</span>
+                </label>
               </div>
             </div>
-          </label>
+          </div>
           <p class="price-range">Стоимость за сутки пребывания в номере</p>
           <div class="checkbox">
             <p class="title-text">Правила дома
@@ -1097,8 +1271,8 @@ input::-webkit-inner-spin-button {
           <div class="socialnetwork"><a href="https://twitter.com"><img src=" ../../img/twitter.svg" alt="twitter"/></a><a href="https://facebook.com"><img src=" ../../img/facebook.svg" alt="facebook"/></a><a href="https://instagram.com"><img src=" ../../img/insta.svg" alt="insta"/></a></div>
         </div>
       </div>
-      <script src="../scripts/numbers.js"></script>
       <script src="../../components/checkbox/checkbox.js"></script>
+      <script src="../../components/dropdown/dropdown.js"></script>
     </div>
   </body>
 </html>
