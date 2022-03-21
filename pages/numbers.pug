@@ -8,7 +8,7 @@ block styles
       include ../styles/pages/dist/numbers.css
 
 block scripts 
-    //- script(src='../scripts/numbers.js')
+    script(src='../scripts/numbers.js')
     script(src="../../components/checkbox/checkbox.js")
     script(src='../../components/dropdown/dropdown.js')
 
@@ -46,24 +46,26 @@ block content
                 p.title-text Доступность
                 +checkbox('Широкий коридор', false, 'Ширина коридоров в номере не менее 91 см')
                 +checkbox('Помощник для инвалидов ', false, 'На 1 этаже вас встретит специалист и проводит до номера.')
-            label.arrow-comfort.title-text Удобства номера
-                input.date-guests.big-margin.roma(type="text" value="2 спальни, 2 кровати..." )
-                .dropdown-menu-comfort
-                    .facilities Спальни
-                        .dropdown-buttons
-                            span.round-button.adults-minus(data-button="adult-minus") -
-                            span.adults-number 0
-                            span.round-button.adults-plus(data-button="adult-plus") +
-                    .facilities Кровати
-                        .dropdown-buttons  
-                            span.round-button.children-minus(data-button="childrens-minus") -
-                            span.children-number 0
-                            span.round-button.children-plus(data-button="childrens-plus") +
-                    .facilities Ванные комнаты
-                        .dropdown-buttons
-                            span.round-button.babies-minus(data-button="babies-minus") -
-                            span.babies-number 0
-                            span.round-button.babies-plus(data-button="babies-plus") +
+            
+            +dropdown('Гос')
+            //- label.arrow-comfort.title-text Удобства номера
+            //-     input.date-guests.big-margin.roma(type="text" value="2 спальни, 2 кровати..." )
+            //-     .dropdown-menu-comfort
+            //-         .facilities Спальни
+            //-             .dropdown-buttons
+            //-                 span.round-button.adults-minus(data-button="adult-minus") -
+            //-                 span.adults-number 0
+            //-                 span.round-button.adults-plus(data-button="adult-plus") +
+            //-         .facilities Кровати
+            //-             .dropdown-buttons  
+            //-                 span.round-button.children-minus(data-button="childrens-minus") -
+            //-                 span.children-number 0
+            //-                 span.round-button.children-plus(data-button="childrens-plus") +
+            //-         .facilities Ванные комнаты
+            //-             .dropdown-buttons
+            //-                 span.round-button.babies-minus(data-button="babies-minus") -
+            //-                 span.babies-number 0
+            //-                 span.round-button.babies-plus(data-button="babies-plus") +
             .more-comfort.title-text Дополнительные удобства
             .dropdown-checkbox 
                 +checkbox('Завтрак', true)

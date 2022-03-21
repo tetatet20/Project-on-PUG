@@ -472,7 +472,7 @@ p {
   border-bottom: 2px solid rgba(31, 32, 65, 0.5);
   border-left: 2px solid rgba(31, 32, 65, 0.5);
   transform: rotate(315deg);
-  right: 15px;
+  right: -305px;
   top: 37px;
 }
 .guests-input {
@@ -525,7 +525,7 @@ p {
 .dropdown-menu {
   z-index: 2;
   position: absolute;
-  bottom: -100px;
+  bottom: -98px;
   left: 0;
   display: none;
   width: 320px;

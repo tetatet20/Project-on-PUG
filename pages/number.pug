@@ -9,8 +9,10 @@ block styles
 
 block scripts 
     script(src='../scripts/number.js')
+    script(src='../../components/dropdown/dropdown.js')
 
 block content
+    include ../components/dropdown/dropdown.pug
     .image-container
         .img-one
             img(src="../../img/number1.png", alt="1")
@@ -103,8 +105,9 @@ block content
                     input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")
                 label.dropdown-calendar Выезд
                     input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")     
-            label.guests Гости
-                input.guests-input(type="text" value="Сколько гостей" readonly)  
+            +dropdown()
+            //- label.guests Гости
+            //-     input.guests-input(type="text" value="Сколько гостей" readonly)  
             .price-calculation
                 .price-calculation-number 
                     p 9 990₽ х 4 суток
