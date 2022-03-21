@@ -18,7 +18,7 @@ moreСomfort.addEventListener("click", (e) => {
 
 
 // // Объявляем всякие кнопки, менюшки инпуты
-const dateGuests = document.querySelector(".roma");
+// const dateGuests = document.querySelector(".roma");
 
 // // объявляем плюсики и минусики и цифры
 // const adultsMinus = document.querySelector(".adults-minus");
@@ -130,20 +130,3 @@ const dateGuests = document.querySelector(".roma");
 //     }
 //     }
 //   }
-
-
-  //Сложные чекбоксы
-  const checkbox3 = document.querySelector('#checkbox_3');
-  checkbox3.addEventListener("click", () => {
-    checkbox3.classList.toggle("checkbox-active");
-    })
-
-  const checkbox4 = document.querySelector('#checkbox_4');
-  checkbox4.addEventListener("click", () => {
-  checkbox4.classList.toggle("checkbox-active");
-  })
-
-  const checkbox5 = document.querySelector('#checkbox_5');
-  checkbox5.addEventListener("click", () => {
-  checkbox5.classList.toggle("checkbox-active");
-  })
