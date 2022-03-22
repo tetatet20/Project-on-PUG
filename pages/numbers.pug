@@ -8,7 +8,7 @@ block styles
       include ../styles/pages/dist/numbers.css
 
 block scripts 
-    script(src='../scripts/numbers.js')
+    //- script(src='../scripts/numbers.js')
     script(src="../../components/checkbox/checkbox.js")
     script(src='../../components/dropdown/dropdown.js')
 
@@ -20,7 +20,7 @@ block content
         .button-menu
             label.title-text.arrow-date-guests Даты пребывания в отеле
                 input.date-guests.date-stay(type="text" value="19 авг - 23 авг" readonly)
-            +dropdown()
+            +dropdown('Гости','Сколько гостей','Взрослые','Дети','Младенцы','guest')
             //- label.title-text.arrow-date-guests Гости
             //-     input.date-guests.number-guests(type="text" value="3 гостя, 1 младенец" readonly)
 
@@ -47,7 +47,7 @@ block content
                 +checkbox('Широкий коридор', false, 'Ширина коридоров в номере не менее 91 см')
                 +checkbox('Помощник для инвалидов ', false, 'На 1 этаже вас встретит специалист и проводит до номера.')
             
-            +dropdown('Гос')
+            +dropdown('Удобства номера','2 спальни, 2 кровати...','Спальни','Кровати','Ванные комнаты','comfort')
             //- label.arrow-comfort.title-text Удобства номера
             //-     input.date-guests.big-margin.roma(type="text" value="2 спальни, 2 кровати..." )
             //-     .dropdown-menu-comfort

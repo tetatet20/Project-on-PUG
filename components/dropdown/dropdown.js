@@ -1,18 +1,17 @@
 const labels = document.querySelectorAll(".guests");
 
 labels.forEach(function (label) {
-  const guestsInput = label.querySelector(".guests-input");
-  const adultsСounter = label.querySelector(".adults-number");
-  const childrenСounter = label.querySelector(".children-number");
-  const babiesСounter = label.querySelector(".babies-number");
+  const input = label.querySelector(".guests-input");
+  const firstСounter = label.querySelector(".adults-number");
+  const secondСounter = label.querySelector(".children-number");
+  const thirdСounter = label.querySelector(".babies-number");
   const applyButton = label.querySelector(".apply");
   const cleanButton = label.querySelector(".clean");
 
-  let adults = 0;
-  let childrens = 0;
-  let babies = 0;
-  let completeCount = 0;
-
+  let first = 0;
+  let second = 0;
+  let third = 0;
+  
   const dropdown = label.querySelector(".dropdown-menu");
 
   label.addEventListener("click", (e) => {
@@ -25,40 +24,41 @@ labels.forEach(function (label) {
   cleanButton.addEventListener("click", (e) => {
     e.stopPropagation();
 
-    adults = childrens = babies = 0;
+    first = second = third = 0;
 
-    adultsСounter.innerText = 0;
-    childrenСounter.innerText = 0;
-    babiesСounter.innerText = 0;
+    firstСounter.innerText = 0;
+    secondСounter.innerText = 0;
+    thirdСounter.innerText = 0;
 
     updateCompleteCount();
   });
+
+
 
   dropdown.addEventListener("click", (e) => {
     if (!e.target.dataset?.button) return;
 
     switch (e.target.dataset.button) {
-      case "adult-minus":
-        if (adults === 0) return;
-        adults--;
+      case "first-minus":
+        if (first === 0) return;
+        first--;
         break;
-      case "adult-plus":
-        adults++;
-        console.log(adults);
+      case "first-plus":
+        first++;
         break;
-      case "childrens-minus":
-        if (childrens === 0) return;
-        childrens--;
+      case "second-minus":
+        if (second === 0) return;
+        second--;
         break;
-      case "childrens-plus":
-        childrens++;
+      case "second-plus":
+        second++;
         break;
-      case "babies-minus":
-        if (babies === 0) return;
-        babies--;
+      case "third-minus":
+        if (third === 0) return;
+        third--;
         break;
-      case "babies-plus":
-        babies++;
+      case "third-plus":
+        third++;
         break;
     }
 
@@ -67,115 +67,71 @@ labels.forEach(function (label) {
 
   function updateCounts(count) {
     switch (count) {
-      case "adult-minus":
-      case "adult-plus":
-        adultsСounter.innerText = adults;
+      case "first-minus":
+      case "first-plus":
+        firstСounter.innerText = first;
         break;
 
-      case "childrens-minus":
-      case "childrens-plus":
-        childrenСounter.innerText = childrens;
+      case "second-minus":
+      case "second-plus":
+        secondСounter.innerText = second;
         break;
 
-      case "babies-minus":
-      case "babies-plus":
-        babiesСounter.innerText = babies;
+      case "third-minus":
+      case "third-plus":
+        thirdСounter.innerText = third;
         break;
     }
 
     updateCompleteCount();
   }
 
+  function bedsString(firstText, secondText, thirdText) {
+      return `${first} ${firstText}, ${second} ${secondText}, ${third} ${thirdText}`
+      
+  }
   function updateCompleteCount() {
-    const guestsSum = adults + childrens + babies;
-
-    if (guestsSum == 1) {
-      guestsInput.value = guestsSum + " гость";
-    } else if ((guestsSum > 1) & (guestsSum < 5)) {
-      guestsInput.value = guestsSum + " гостя";
-    } else if (guestsSum == 0) {
-      guestsInput.value = null;
-      guestsInput.placeholder = "Сколько гостей";
+    const sum = first + second + third;
+    
+    if (label.dataset.type === 'guest') {
+      if (sum == 1) {
+        input.value = sum + " гость";
+      } else if ((sum > 1) & (sum < 5)) {
+        input.value = sum + " гостя";
+      } else if (sum == 0) {
+        input.value = null;
+        input.placeholder = "Сколько гостей";
+      } else {
+        input.value = sum + " гостей";
+      }
     } else {
-      guestsInput.value = guestsSum + " гостей";
+      if (first == 1) {
+         input.value = bedsString('спальня','кровать' ,'');
+      } else if ((first > 1) & (first < 5)) {
+        input.value = bedsString('спальни');
+      } else {
+        input.value = bedsString('спален');
+      }
+
+      if (second == 1) {
+        input.value = input.value + ', ' + second + " кровать";
+      } else if ((second > 1) & (second < 5)) {
+        input.value = input.value + ', ' + second + " кровати";
+      } else {
+        input.value = input.value + ', ' + second + " кроватей";
+      }
+
+      if (third) {
+        if (third == 1) {
+          input.value = input.value + ', ' + third + ' ванна'
+        } else if ((third > 1) & (third < 5)) {
+          input.value = input.value + ', ' + third + " ванны";
+        } else {
+          input.value = input.value + ', ' + third + ' ванн'
+        }
+      }
+
     }
+
   }
 });
-
-// cleanButton.addEventListener('click', (e) => {
-//     e.stopPropagation();
-
-//     adults = childrens = babies = 0;
-
-//     adultsСounter.innerText = 0;
-//     childrenСounter.innerText = 0;
-//     babiesСounter.innerText = 0;
-
-//     updateCompleteCount();
-// })
-
-// dropdown.addEventListener('click', (e) => {
-//     if (!e.target.dataset?.button) return
-
-//     switch (e.target.dataset.button) {
-//         case 'adult-minus':
-//             if (adults === 0) return
-//             adults--
-//             break;
-//         case 'adult-plus':
-//             adults++
-//             break;
-//         case 'childrens-minus':
-//             if (childrens === 0) return
-//             childrens--
-//             break;
-//         case 'childrens-plus':
-//             childrens++
-//             break;
-//         case 'babies-minus':
-//             if (babies === 0) return
-//             babies--
-//             break;
-//         case 'babies-plus':
-//             babies++
-//             break;
-//     }
-
-//     updateCounts(e.target.dataset.button)
-// })
-
-// function updateCounts(count) {
-//     switch (count) {
-//         case 'adult-minus':
-//         case 'adult-plus':
-//             adultsСounter.innerText = adults;
-//             break;
-
-//         case 'childrens-minus':
-//         case 'childrens-plus':
-//             childrenСounter.innerText = childrens;
-//             break;
-
-//         case 'babies-minus':
-//         case 'babies-plus':
-//             babiesСounter.innerText = babies;
-//             break;
-//     }
-
-//     updateCompleteCount();
-// }
-
-// function updateCompleteCount() {
-//     const guestsSum = adults + childrens + babies;
-
-//     if (guestsSum == 1) {
-//         guestsInput.value = guestsSum + ' гость';
-//     } else if ((guestsSum > 1) & (guestsSum < 5)) {
-//         guestsInput.value = guestsSum + ' гостя';
-//     } else if (guestsSum == 0) {
-//         guestsInput.value = null;
-//         guestsInput.placeholder = 'Сколько гостей';
-//     } else {
-//         guestsInput.value = guestsSum + ' гостей';
-//     }
-// }

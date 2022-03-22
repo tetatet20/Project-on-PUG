@@ -1,24 +1,22 @@
-mixin dropdown()
-    label.guests тут лейбл
-        input.guests-input(type="text" value="Сколько гостей" readonly)
+mixin dropdown(label, value, first, second, third, selector)
+    label.guests(data-type=selector)=label
+        input.guests-input(type="text" value=value readonly)
         .dropdown-menu
-          .age Взрослые
+          .age=first
             .dropdown-buttons
-              span.round-button.adults-minus(data-button="adult-minus") -
+              span.round-button.adults-minus(data-button="first-minus") -
               span.adults-number 0
-              span.round-button.adults-plus(data-button="adult-plus") +
-          .age Дети
+              span.round-button.adults-plus(data-button="first-plus") +
+          .age=second
             .dropdown-buttons  
-              span.round-button.children-minus(data-button="childrens-minus") -
+              span.round-button.children-minus(data-button="second-minus") -
               span.children-number 0
-              span.round-button.children-plus(data-button="childrens-plus") +
-          .age Младенцы
+              span.round-button.children-plus(data-button="second-plus") +
+          .age=third
             .dropdown-buttons
-              span.round-button.babies-minus(data-button="babies-minus") -
+              span.round-button.babies-minus(data-button="third-minus") -
               span.babies-number 0
-              span.round-button.babies-plus(data-button="babies-plus") +
+              span.round-button.babies-plus(data-button="third-plus") +
           .clean-apply
             button.clean-apply-button.clean Очистить
             button.clean-apply-button.apply Применить
-        //- a(href="./numbers.html")
-        //-   button.selection Подобрать номер

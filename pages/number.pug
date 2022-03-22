@@ -105,9 +105,7 @@ block content
                     input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")
                 label.dropdown-calendar Выезд
                     input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")     
-            +dropdown()
-            //- label.guests Гости
-            //-     input.guests-input(type="text" value="Сколько гостей" readonly)  
+            +dropdown('Гости','Сколько гостей','Взрослые','Дети','Младенцы','guest') 
             .price-calculation
                 .price-calculation-number 
                     p 9 990₽ х 4 суток

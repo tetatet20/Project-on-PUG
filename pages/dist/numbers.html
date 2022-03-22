@@ -480,13 +480,12 @@ p {
   top: 37px;
 }
 .guests-input {
-  width: 320px;
+  width: 266px;
   height: 44px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px;
   box-sizing: border-box;
   font-family: Montserrat;
-  padding: 13px 193px 13px 15px;
   margin-top: 5px;
   cursor: pointer;
 }
@@ -919,17 +918,17 @@ input::-webkit-inner-spin-button {
           <label class="title-text arrow-date-guests">Даты пребывания в отеле
             <input class="date-guests date-stay" type="text" value="19 авг - 23 авг" readonly="readonly"/>
           </label>
-                <label class="guests">
+                <label class="guests" data-type="guest">Гости
                   <input class="guests-input" type="text" value="Сколько гостей" readonly="readonly"/>
                   <div class="dropdown-menu">
                     <div class="age">Взрослые
-                      <div class="dropdown-buttons"><span class="round-button adults-minus" data-button="adult-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="adult-plus">+</span></div>
+                      <div class="dropdown-buttons"><span class="round-button adults-minus" data-button="first-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="first-plus">+</span></div>
                     </div>
                     <div class="age">Дети
-                      <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="childrens-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="childrens-plus">+</span></div>
+                      <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="second-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="second-plus">+</span></div>
                     </div>
                     <div class="age">Младенцы
-                      <div class="dropdown-buttons"><span class="round-button babies-minus" data-button="babies-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus" data-button="babies-plus">+</span></div>
+                      <div class="dropdown-buttons"><span class="round-button babies-minus" data-button="third-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus" data-button="third-plus">+</span></div>
                     </div>
                     <div class="clean-apply">
                       <button class="clean-apply-button clean">Очистить</button>
@@ -986,17 +985,17 @@ input::-webkit-inner-spin-button {
                     </div>
                   </div>
           </div>
-                <label class="guests">Гос
-                  <input class="guests-input" type="text" value="Сколько гостей" readonly="readonly"/>
+                <label class="guests" data-type="comfort">Удобства номера
+                  <input class="guests-input" type="text" value="2 спальни, 2 кровати..." readonly="readonly"/>
                   <div class="dropdown-menu">
-                    <div class="age">Взрослые
-                      <div class="dropdown-buttons"><span class="round-button adults-minus" data-button="adult-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="adult-plus">+</span></div>
+                    <div class="age">Спальни
+                      <div class="dropdown-buttons"><span class="round-button adults-minus" data-button="first-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="first-plus">+</span></div>
                     </div>
-                    <div class="age">Дети
-                      <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="childrens-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="childrens-plus">+</span></div>
+                    <div class="age">Кровати
+                      <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="second-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="second-plus">+</span></div>
                     </div>
-                    <div class="age">Младенцы
-                      <div class="dropdown-buttons"><span class="round-button babies-minus" data-button="babies-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus" data-button="babies-plus">+</span></div>
+                    <div class="age">Ванные комнаты
+                      <div class="dropdown-buttons"><span class="round-button babies-minus" data-button="third-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus" data-button="third-plus">+</span></div>
                     </div>
                     <div class="clean-apply">
                       <button class="clean-apply-button clean">Очистить</button>
@@ -1275,7 +1274,6 @@ input::-webkit-inner-spin-button {
           <div class="socialnetwork"><a href="https://twitter.com"><img src=" ../../img/twitter.svg" alt="twitter"/></a><a href="https://facebook.com"><img src=" ../../img/facebook.svg" alt="facebook"/></a><a href="https://instagram.com"><img src=" ../../img/insta.svg" alt="insta"/></a></div>
         </div>
       </div>
-      <script src="../scripts/numbers.js"></script>
       <script src="../../components/checkbox/checkbox.js"></script>
       <script src="../../components/dropdown/dropdown.js"></script>
     </div>
