@@ -11,7 +11,7 @@ labels.forEach(function (label) {
   let first = 0;
   let second = 0;
   let third = 0;
-  
+
   const dropdown = label.querySelector(".dropdown-menu");
 
   label.addEventListener("click", (e) => {
@@ -32,8 +32,6 @@ labels.forEach(function (label) {
 
     updateCompleteCount();
   });
-
-
 
   dropdown.addEventListener("click", (e) => {
     if (!e.target.dataset?.button) return;
@@ -86,14 +84,35 @@ labels.forEach(function (label) {
     updateCompleteCount();
   }
 
-  function bedsString(firstText, secondText, thirdText) {
-      return `${first} ${firstText}, ${second} ${secondText}, ${third} ${thirdText}`
-      
+  function bedsString() {
+    let firstText =
+      first === 1 ? "спальня" : first > 1 && first < 5 ? "спальни" : "спален";
+
+      // тоже самое что и выше
+      // if (first === 1) {
+      //   firstText = 'спальня'
+      // } else if (first > 1 && first < 5) {
+      //   firstText = 'спальни'
+      // } else {
+      //   firstText = 'спален'
+      // }
+
+    const secondText =
+      second === 1
+        ? "кровать"
+        : second > 1 && second < 5
+        ? "кровати"
+        : "крвоватей";
+
+    const thirdText =
+      third === 1 ? "ванна" : third > 1 && third < 5 ? "ванны" : "ванн";
+
+    return `${first} ${firstText}, ${second} ${secondText}, ${third} ${thirdText}`;
   }
   function updateCompleteCount() {
     const sum = first + second + third;
-    
-    if (label.dataset.type === 'guest') {
+
+    if (label.dataset.type === "guest") {
       if (sum == 1) {
         input.value = sum + " гость";
       } else if ((sum > 1) & (sum < 5)) {
@@ -105,33 +124,34 @@ labels.forEach(function (label) {
         input.value = sum + " гостей";
       }
     } else {
-      if (first == 1) {
-         input.value = bedsString('спальня','кровать' ,'');
-      } else if ((first > 1) & (first < 5)) {
-        input.value = bedsString('спальни');
-      } else {
-        input.value = bedsString('спален');
-      }
+      input.value = bedsString();
 
-      if (second == 1) {
-        input.value = input.value + ', ' + second + " кровать";
-      } else if ((second > 1) & (second < 5)) {
-        input.value = input.value + ', ' + second + " кровати";
-      } else {
-        input.value = input.value + ', ' + second + " кроватей";
-      }
+      // это говнокод романа огромный 
+      // if (first == 1) {
+      //   input.value = bedsString("спальня", "кровать", "");
+      // } else if ((first > 1) & (first < 5)) {
+      //   input.value = bedsString("спальни");
+      // } else {
+      //   input.value = bedsString("спален");
+      // }
 
-      if (third) {
-        if (third == 1) {
-          input.value = input.value + ', ' + third + ' ванна'
-        } else if ((third > 1) & (third < 5)) {
-          input.value = input.value + ', ' + third + " ванны";
-        } else {
-          input.value = input.value + ', ' + third + ' ванн'
-        }
-      }
+      // if (second == 1) {
+      //   input.value = input.value + ", " + second + " кровать";
+      // } else if ((second > 1) & (second < 5)) {
+      //   input.value = input.value + ", " + second + " кровати";
+      // } else {
+      //   input.value = input.value + ", " + second + " кроватей";
+      // }
 
+      // if (third) {
+      //   if (third == 1) {
+      //     input.value = input.value + ", " + third + " ванна";
+      //   } else if ((third > 1) & (third < 5)) {
+      //     input.value = input.value + ", " + third + " ванны";
+      //   } else {
+      //     input.value = input.value + ", " + third + " ванн";
+      //   }
+      // }
     }
-
   }
 });

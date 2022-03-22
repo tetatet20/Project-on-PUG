@@ -2,8 +2,10 @@ html
   head
     block title
     block styles
+    style 
+      include ../styles/layouts/dist/default.css
   body
-    .container
+    .default-conteiner
       include ../components/header.pug 
       block content
       include ../components/footer.pug

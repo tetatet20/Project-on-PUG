@@ -559,9 +559,15 @@ p {
   cursor: pointer;
 }
     </style>
+    <style>
+       .default-conteiner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+    </style>
   </head>
   <body>
-    <div class="container">
+    <div class="default-conteiner">
       <div class="header"><a href="./index.html"> <img src=" ../../img/Logo.svg" alt="vector"/></a>
         <div class="navigation-buttons">  
           <ul class="navigation"> 
@@ -591,13 +597,13 @@ p {
                   <input class="guests-input" type="text" value="Сколько гостей" readonly="readonly"/>
                   <div class="dropdown-menu">
                     <div class="age">Взрослые
-                      <div class="dropdown-buttons"><span class="round-button adults-minus" data-button="adult-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="adult-plus">+</span></div>
+                      <div class="dropdown-buttons"><span class="round-button adults-minus" data-button="first-minus">-</span><span class="adults-number">0</span><span class="round-button adults-plus" data-button="first-plus">+</span></div>
                     </div>
                     <div class="age">Дети
-                      <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="childrens-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="childrens-plus">+</span></div>
+                      <div class="dropdown-buttons"> <span class="round-button children-minus" data-button="second-minus">-</span><span class="children-number">0</span><span class="round-button children-plus" data-button="second-plus">+</span></div>
                     </div>
                     <div class="age">Младенцы
-                      <div class="dropdown-buttons"><span class="round-button babies-minus" data-button="babies-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus" data-button="babies-plus">+</span></div>
+                      <div class="dropdown-buttons"><span class="round-button babies-minus" data-button="third-minus">-</span><span class="babies-number">0</span><span class="round-button babies-plus" data-button="third-plus">+</span></div>
                     </div>
                     <div class="clean-apply">
                       <button class="clean-apply-button clean">Очистить</button>
