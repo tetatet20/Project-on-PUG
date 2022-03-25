@@ -1,5 +1,7 @@
 const labels = document.querySelectorAll(".guests");
 
+
+
 labels.forEach(function (label) {
   const input = label.querySelector(".guests-input");
   const firstСounter = label.querySelector(".adults-number");
@@ -125,6 +127,10 @@ labels.forEach(function (label) {
       }
     } else {
       input.value = bedsString();
+
+
+
+
 
       // это говнокод романа огромный 
       // if (first == 1) {

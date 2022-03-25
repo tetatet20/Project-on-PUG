@@ -9,15 +9,15 @@ block styles
       include ../styles/pages/dist/signIn.css
 
 block scripts 
-  script(src='../scripts/signUp.js')
+  //- script(src='../scripts/signUp.js')
 
 
 block content
     p.header-register Войти
     .email-password 
         label.header-label
-            input.account-registration-input(type="text" placeholder="Email") 
-            input.account-registration-input(type="text" placeholder="Пароль") 
+            input.account-registration-input(type="text" placeholder="Email" autocomplete="on" name="email") 
+            input.account-registration-input(type="password" placeholder="Пароль" autocomplete="on") 
     .register-container
         a(href="#")
             button.register-button Войти

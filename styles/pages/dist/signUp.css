@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 .header {
   height: 70px;
-  width: 100%;
+  max-width: 1440px;
   display: flex;
   justify-content: space-between;
   margin: 0px;
@@ -12,7 +12,9 @@
   line-height: 17px;
   background-color: white;
   padding: 0 140px;
-  box-sizing: border-box;
+  position: relative;
+  z-index: 3;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 }
 
 li {
@@ -110,15 +112,25 @@ li {
 
 .footer {
   font-family: Montserrat;
-  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 0 140px;
-  box-sizing: border-box;
+  border-top: 1px solid rgba(31, 32, 65, 0.25);
+  position: relative;
+}
+
+.border-footer-bottom {
+  border-top: 1px solid rgba(31, 32, 65, 0.25);
+  padding: 0 140px;
 }
 
 .nav-footer {
+  z-index: 1;
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 100px 0;
+  box-sizing: border-box;
 }
 
 .nav-footer li:not(:last-child) {
@@ -127,6 +139,7 @@ li {
 
 .logo-footer {
   padding-left: 0px;
+  flex-shrink: 0;
 }
 
 .logo-footer img {
@@ -210,15 +223,6 @@ li {
 .footer-bottom {
   display: flex;
   justify-content: space-between;
-  position: relative;
-}
-.footer-bottom::after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 1440px;
-  left: -140px;
-  background-color: rgba(31, 32, 65, 0.25);
 }
 
 .socialnetwork {
@@ -312,7 +316,7 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 1440px;
+  max-width: 1440px;
   height: min-content;
   padding-top: 19px;
   padding-bottom: 19px;
@@ -373,6 +377,12 @@ p {
   align-items: center;
   text-align: center;
   margin-top: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(31, 32, 65, 0.75);
 }
 
 .register-container {
@@ -389,10 +399,16 @@ p {
   line-height: 24px;
   color: rgba(31, 32, 65, 0.5);
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .men {
   margin-right: 20px;
+}
+
+.men, .woomen {
+  margin-left: 10px;
 }
 
 .input-radio {
@@ -401,7 +417,6 @@ p {
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   border-radius: 10px;
-  background-color: red;
 }
 
 .header-label {

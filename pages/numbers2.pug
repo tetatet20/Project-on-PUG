@@ -8,7 +8,7 @@ block styles
       include ../styles/pages/dist/numbers.css
 
 block scripts 
-    script(src='../scripts/numbers.js')
+    script(src='../scripts/numbers2.js')
     script(src="../../components/checkbox/checkbox.js")
     script(src='../../components/dropdown/dropdown.js')
 
@@ -56,18 +56,19 @@ block content
             .h2 
                 h2 Номера, которые мы для вас подобрали
             .card-numbers
+                +card('../../img/img6.png', '982', false, '5800', 3, '56')
                 +card('../../img/img1.jpg', '888', true, '9990', 5, '145')
                 +card('../../img/img2.png', '840', false, '9900', 4, '65')
                 +card('../../img/img3.png', '980', true, '8500', 3, '35')
                 +card('../../img/img4.png', '856', false, '7300', 5, '19')
-                +card('../../img/img5.png', '740', false, '6000', 4, '44')
-                +card('../../img/img6.png', '982', false, '5800', 3, '56')
-                +card('../../img/img7.png', '678', false, '5500', 5, '45')
-                +card('../../img/img8.png', '450', false, '5300', 4, '39')
-                +card('../../img/img9.png', '350', false, '5000', 3, '77')
-                +card('../../img/img10.png', '666', false, '5000', 5, '25')
-                +card('../../img/img11.png', '444', false, '5000', 4, '15')
                 +card('../../img/img12.png', '352', false, '5000', 3, '55')
+                +card('../../img/img10.png', '666', false, '5000', 5, '25')
+                +card('../../img/img8.png', '450', false, '5300', 4, '39')
+                +card('../../img/img5.png', '740', false, '6000', 4, '44')
+                +card('../../img/img7.png', '678', false, '5500', 5, '45')
+                +card('../../img/img9.png', '350', false, '5000', 3, '77')
+                +card('../../img/img11.png', '444', false, '5000', 4, '15')
+                
             .page-selection
                 nav.page-number
                     a(href="./numbers.html")
@@ -75,11 +76,11 @@ block content
                     a(href="./numbers2.html") 
                         button.current-element 2
                     button.current-element 3
-                    //- a(href="")  3
+                        //- a(href="")  
                     button.current-element ...
-                    //- a(href="")  ...
+                        //- a(href="")  ...
                     button.current-element 15
-                    //- a(href="")  15
+                        //- a(href="")
                     button.next
                         a(href="") 
                         

@@ -15,21 +15,21 @@ block content
   p.header-register Регистрация аккаунта
   .name
     label
-      input.account-registration-input(type="email" placeholder="Имя") 
+      input.account-registration-input(type="email" placeholder="Имя" name="fullname") 
     label
-      input.account-registration-input(type="text" placeholder="Фамилия") 
+      input.account-registration-input(type="text" placeholder="Фамилия" name="fullname") 
   .gender
     input.input-radio(type="radio" name="gender" id="men")
     label.men(for="men") Мужчина
     input.input-radio(type="radio" name="gender" id="woomen")
-    label(for="woomen") Женщина
+    label.woomen(for="woomen") Женщина
   .date-of-birth
     label.header-label  Дата рождения
       input.account-registration-input.date-input(type="date" placeholder="ДД.ММ.ГГГГ") 
   .email-password 
     label.header-label Данные для входа в сервис
-      input.account-registration-input(type="text" placeholder="Email") 
-      input.account-registration-input(type="text" placeholder="Пароль") 
+      input.account-registration-input(type="text" placeholder="Email" name="email") 
+      input.account-registration-input(type="password" placeholder="Пароль") 
   .special-offer
     .container-radio 
       .radio

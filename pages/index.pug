@@ -3,6 +3,9 @@ extends ../layout/default.pug
 block title
     title Главная страница
 
+//- block meta
+    //- meta(name="viewport" content="width=1440")
+
 block styles
     style
       include ../styles/pages/dist/index.css
@@ -17,10 +20,11 @@ block content
       p Найдем номера под<br>ваши пожелания
       .arrival-departure-container
         label.dropdown-calendar Прибытие
-          input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")
+          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
         label.dropdown-calendar Выезд
-          input.arrival-departure(type="text" value="ДД.ММ.ГГГГ")
-      +dropdown('Гости','Сколько гостей','Взрослые','Дети','Младенцы','guest')
+          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
+      .content-max
+        +dropdown('Гости','Сколько гостей','Взрослые','Дети','Младенцы','guest')
       a(href="./numbers.html")
           button.selection Подобрать номер
     p.caption Лучшие номера для вашей работы,<br>отдыха и просто вдохновения

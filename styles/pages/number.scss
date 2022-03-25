@@ -63,6 +63,7 @@ $grey-25: rgba(31, 32, 65, .25);
     font-family: 'Montserrat';
     line-height: 24px;
     font-size: 14px;
+    padding-bottom: 70px;
 }
 
 .comfort {
@@ -443,10 +444,6 @@ margin-top: 20px;
     -ms-user-select: none;
     user-select: none;
 
-    &::after {
-        @include arrow();
-    }
-
     &-input {
         width: 320px;
         height: 44px;
@@ -589,4 +586,21 @@ margin-top: 20px;
     font-size: 14px;
     line-height: 24px;
     margin-right: 5px;
+}
+
+.content-max {
+    width: 320px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-bottom: 2px solid $grey-50;
+        border-left: 2px solid $grey-50;
+        transform: rotate(315deg);
+        right: 20px;
+        top: 37px;
+        cursor: pointer;
+    }
 }
