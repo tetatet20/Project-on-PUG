@@ -1,0 +1,1 @@
+const moreСomfort=document.querySelector(".more-comfort"),dropdownСheckbox=document.querySelector(".dropdown-checkbox");moreСomfort.addEventListener("click",(o=>{"selection"!==o.target.classList[0]&&dropdownСheckbox.classList.toggle("dropdown-checkbox-show")}));

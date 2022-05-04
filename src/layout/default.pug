@@ -1,0 +1,12 @@
+html
+  head
+    block title
+    block styles
+    style 
+      include ../styles/layouts/default.scss
+  body
+    .default-conteiner
+      include ../components/header.pug 
+      block content
+      include ../components/footer.pug
+      block scripts

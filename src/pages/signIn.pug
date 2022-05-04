@@ -1,0 +1,28 @@
+extends ../layout/authorization.pug
+
+block title
+  title  Авторизация
+
+//- block styles
+//-     style
+//-       include ../styles/pages/dist/signUp.css
+//-       include ../styles/pages/dist/signIn.css
+
+block scripts 
+  //- script(src='../scripts/signUp.js')
+
+
+block content
+  p.header-register Войти
+  .email-password 
+    label.header-label
+      input.account-registration-input(type="text" placeholder="Email" autocomplete="on" name="email") 
+      input.account-registration-input(type="password" placeholder="Пароль" autocomplete="on") 
+  .register-container
+    a(href="#")
+      button.register-button Войти
+  .come-in
+    .account-available Нет аккаунта на Toxin?
+    .come-in-container
+      a(href="#")
+        button.to-come-in-button Создать

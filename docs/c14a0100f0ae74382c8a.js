@@ -1,0 +1,1 @@
+const likes=document.querySelectorAll(".likes-passive");likes.forEach((function(e){const t=e.querySelector(".number-hearts"),s=e.querySelector(".heart");e.addEventListener("click",(function(){e.classList.contains("likes-active")?t.textContent--:t.textContent++,e.classList.toggle("likes-active"),s.classList.toggle("heart-active")}))}));

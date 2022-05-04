@@ -1,0 +1,1 @@
+const checkboxes=document.querySelectorAll(".checkbox-passive");checkboxes.forEach((function(c){c.addEventListener("click",(function(){c.classList.toggle("checkbox-active")}))}));
