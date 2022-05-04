@@ -1,0 +1,25 @@
+mixin card(img, number, isLuxe, price, stars, reviews)
+    .card-container
+        .img-container
+            a(href="./number.html") 
+                img(src=img, alt="alt")
+            .span-container
+                span.circle-active 
+                span.circle-passive
+                span.circle-passive
+                span.circle-passive
+        .card-bottom
+            .card-info
+                p.number='№ ' + number
+                if isLuxe
+                    p.luxe Люкс
+                p.price=price + "₽ в сутки"
+            .card-review
+                .card-stars
+                    - var emptyStart = 5 - stars
+                    - for (var x = 0; x < stars; x++)
+                        img(src="../img/star.svg" alt="alt")
+                    - for (var y = 0; y < emptyStart; y++)
+                        img(src="../img/star_border.svg" alt="alt")
+                p.reviews=reviews + " Отзывов"
+

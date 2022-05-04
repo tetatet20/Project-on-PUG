@@ -1,0 +1,223 @@
+@import "@/styles/components/footer.scss";
+@import "@/styles/components/header.scss";
+@import "@/components/dropdown/dropdown.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+$grey-50: rgba(31, 32, 65, .5);
+$grey-25: rgba(31, 32, 65, .25);
+
+@mixin arrow {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid $grey-50;
+    border-left: 2px solid $grey-50;
+    transform: rotate(315deg);
+    right: 15px;
+    top: 37px;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.content {
+    background-image: url('@/img/background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1440px;
+    max-height: 830px;
+    margin: 0 auto;
+    padding-top:70px;
+    padding-left: 140px;
+    padding-bottom: 18px;
+}
+
+.number-selection {
+    max-width: 380px;
+    max-height: 380px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 40px 30px 30px 30px;
+    box-sizing: border-box;
+}
+
+.caption {
+    margin-right: 134px;
+    text-align: right;
+    margin-top: 320px;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.arrival-departure {
+    width: 150px;
+    height: 44px;
+    border: 1px solid $grey-25;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    padding: 8px 0px 8px 15px;
+    margin-top: 5px;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
+.number-selection p {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #1F2041;
+    margin-bottom: 21px;
+    font-family: Montserrat;
+}
+
+.dropdown-calendar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+
+    &::after {
+        @include arrow();
+    }
+}
+
+.dropdown-calendar:first-child {
+    margin-right: 20px;
+}
+.dropdown {
+    width: max-content;
+
+}
+
+// .guests {
+//     position: relative;
+//     font-family: Montserrat;
+//     font-weight: bold;
+//     font-size: 12px;
+//     line-height: 15px;
+//     text-transform: uppercase;
+//     color: #1F2041;
+//     -webkit-touch-callout: none;
+//     -webkit-user-select: none;
+//     -khtml-user-select: none;
+//     -moz-user-select: none;
+//     -ms-user-select: none;
+//     user-select: none;
+
+//     &::after {
+//         @include arrow();
+//     }
+
+//     &-input {
+//         width: 320px;
+//         height: 44px;
+//         border: 1px solid $grey-25;
+//         border-radius: 4px;
+//         box-sizing: border-box;
+//         font-family: Montserrat;
+//         padding: 13px 193px 13px 15px;
+//         margin-top: 5px;
+//         cursor: pointer;
+
+//         &:focus {
+//             outline: none;
+//         }
+//     }
+// }
+
+.selection {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    color: white;
+    text-align: center;
+    display: inline-block;
+    border-radius: 22px;
+    width: 320px;
+    height: 44px;
+    text-decoration: none;
+    border: none;
+    font-weight: bold;
+    font-family: Montserrat;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 31px;
+    letter-spacing: 1;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: url('../../img/arrow_forward_white.svg');
+        width: 44px;
+        height: 44px;
+        transform: rotate(360deg);
+        right: 0;
+        top: 13px;
+        cursor: pointer;
+    }
+}
+
+.content-max {
+    width: 320px;
+    position: relative;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-bottom: 2px solid $grey-50;
+        border-left: 2px solid $grey-50;
+        transform: rotate(315deg);
+        right: 20px;
+        top: 37px;
+        cursor: pointer;
+    }
+}

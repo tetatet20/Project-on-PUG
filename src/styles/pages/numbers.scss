@@ -1,0 +1,473 @@
+@import "../components/header.scss";
+@import "../components/footer.scss";
+@import "../../components/checkbox/checkbox.scss";
+@import "../../components/card/card.scss";
+@import "../../components/dropdown/dropdown.scss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+$grey-50: rgba(31, 32, 65, .5);
+$grey-25: rgba(31, 32, 65, .25);
+
+@mixin arrow() {
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-bottom: 2px solid $grey-50;
+    border-left: 2px solid $grey-50;
+    transform: rotate(315deg);
+    right: 15px;
+    top: 37px;
+    cursor: pointer;
+}
+
+button {
+    padding: 0;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+}
+h2,h3{
+    margin: 0;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    padding: 30px 140px 70px;
+    box-sizing: border-box;
+    font-family: Montserrat;
+    background-color:white; 
+}
+
+.button-menu {
+    width: 270px;
+    height: 800px;
+    margin-right: 60px;
+    color:$grey-50;
+}
+
+.card-numbers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // flex-direction: row;
+    // flex-wrap: wrap;
+    // width: max-content;
+}
+
+.date-guests {
+    width: 266px;
+    height: 44px;
+    border: 1px solid $grey-25;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    padding-left: 15px;
+}
+
+.arrow-date-guests {
+    position: relative;
+    margin-top: 30px;
+        &::after {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-bottom: 2px solid $grey-50;
+        border-left: 2px solid $grey-50;
+        transform: rotate(315deg);
+        left: 240px;
+        top: 37px;
+        cursor: pointer;
+        }
+}
+
+.checkbox {
+    margin-top: 30px;
+}
+
+.one-may {
+    font-size: 14px;
+    line-height: 18px;
+    color: $grey-50;
+}
+
+.checkbox-container {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    &:first-child {
+        margin-top: 17px;}
+}
+
+.checkbox-passive {
+    width: 20px;
+    height: 20px;
+    border: 1px solid $grey-25;
+    border-radius: 4px; 
+    display: inline-block;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.checkbox-active {
+    border: 1px solid #BC9CFF;
+
+    &::after {
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        content: '';
+        width: 5px;
+        height: 7px;
+        border-bottom: 2px solid #BC9CFF;
+        border-right: 2px solid #BC9CFF;
+        transform: rotate(40deg);
+    }
+}
+
+.availability {
+    margin-bottom:30px;
+}
+
+.availability-checkbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.more-comfort {
+    margin-top: 30px;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        @include arrow();
+
+        right: 15px;
+        top: 2px;
+    }
+}
+
+.title-text {
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+    margin-bottom: 16px;
+}
+
+.date-stay {
+    margin-bottom: 20px;
+}
+
+.arrow-comfort {
+    position: relative;
+        &::after {
+        @include arrow();
+        }
+}
+
+// .number-guests {
+//     margin-bottom: 30px;
+// }
+
+.price-range {
+    margin-bottom: 30px;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top:13px;
+}
+
+.explanation{
+    font-size: 12px;
+    line-height: 14px;
+    font-weight:400;
+    color:$grey-50;
+    margin-left: 30px;
+}
+
+.caption-checkbox {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.dropdown-checkbox {
+    display: none;
+    z-index: 2;
+
+    &-show {
+        display: block;
+    }
+}
+
+.dropdown-menu-comfort {
+    z-index: 2;
+    position: absolute;
+    bottom: -133px;
+    left: 0;
+    display: none;
+    width: 266px;
+    height: 119px;
+    background-color: white;
+    text-align: left;
+    padding: 7px 10px 7px 15px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    border: 1px solid $grey-50;
+    border-radius: 2px;
+    box-sizing: border-box;
+
+    &-show {
+        display: block;
+    }
+}
+
+.dropdown-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 92px;
+    align-items: center;
+}
+
+.facilities {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    align-items: center;
+        &:last-child {
+            white-space: nowrap;
+        }
+}
+
+.round-button {
+    color: $grey-50;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 22px;
+    border: 1px solid $grey-25;
+    flex-shrink: 0;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 6px 6px;
+    cursor: pointer;
+}
+
+.slider {
+    width: 266px;
+    height: 6px;
+    background: white;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 3px;
+    position: relative;
+
+        &-green {
+            position: absolute;
+            top:0;
+            left: 70px;
+            width: 88px;
+            height: 6px;
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border-radius: 3px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top:-6px;
+            left: 67px;
+            width: 12px;
+            height: 12px;
+            background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+            border: 2px solid #FFFFFF;
+            border-radius: 10px;
+            z-index: 2;
+     }
+     &::before {
+         z-index: 2;
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 147px;
+        width: 12px;
+        height: 12px;
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        border: 2px solid #FFFFFF;
+        border-radius: 10px;
+ }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.filtres_price_input {
+    color: rgba(31, 32, 65, 0.5);
+    border: none;
+}
+.filtres_price_inputs {
+    display: flex;
+    width: 100px;
+    height: 15px;
+    align-items: center;
+    text-align: right;
+}
+.filtres_price_input {
+max-width: 50px;
+}
+
+.filtres_price_title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #1F2041;
+    text-transform: uppercase;
+}
+
+.filtres_item.filtres_price {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filtres_price_label {
+    display: flex;
+}
+
+.h2 {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+ 
+.content-min {
+    position: relative;
+    width: 270px;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-bottom: 2px solid $grey-50;
+        border-left: 2px solid $grey-50;
+        transform: rotate(315deg);
+        right: 20px;
+        top: 37px;
+        cursor: pointer;
+    }
+}
+
+.page-selection {
+text-align: center;
+}
+
+.number-options {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+}
+
+.page-number {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.next {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+    flex-shrink: 0;
+        &::after {
+            position: absolute;
+            content: url('../../img/arrow_forward_white.svg');
+            width: 44px;
+            height: 44px;
+            transform: rotate(360deg);
+            right: -2;
+            top: 10px;
+            cursor: pointer;
+        }
+}
+
+.current-element {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 22px;
+    flex-shrink: 0;
+    margin-right: 5px;
+    cursor: pointer;
+    color: rgba(31, 32, 65, 0.5);
+    &:hover {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    }
+    &:focus {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color:white
+    }
+    // &-active {
+    //     width: 40px;
+    //     height: 40px;
+    //     border-radius: 22px;
+    //     flex-shrink: 0;
+    //     margin-right: 15px;
+    //     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    // }
+}
+
+
