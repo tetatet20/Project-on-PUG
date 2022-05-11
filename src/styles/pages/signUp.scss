@@ -38,9 +38,11 @@ $grey-25: rgba(31, 32, 65, .25);
     background-position: center;
     background-size: cover;
     max-width: 1440px;
-    height: min-content;
-    padding-top: 19px;//Только для signIn
-    padding-bottom: 19px;//Только для signIn
+    // height: min-content;
+    padding-top: 120px;//Только для signIn
+    padding-bottom: 120px;//Только для signIn
+    padding-right: 530px;
+    padding-left: 530px;
     display: flex;
     font-family: Montserrat;
     margin: 0 auto;

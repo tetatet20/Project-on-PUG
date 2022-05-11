@@ -1,7 +1,7 @@
 mixin card(img, number, isLuxe, price, stars, reviews)
     .card-container
         .img-container
-            a(href="./number.html") 
+            a(href="./number.html" target="_blank") 
                 img(src=img, alt="alt")
             .span-container
                 span.circle-active 
@@ -10,7 +10,7 @@ mixin card(img, number, isLuxe, price, stars, reviews)
                 span.circle-passive
         .card-bottom
             .card-info
-                p.number='№ ' + number
+                p.number-card='№ ' + number
                 if isLuxe
                     p.luxe Люкс
                 p.price=price + "₽ в сутки"

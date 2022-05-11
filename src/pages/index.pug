@@ -13,18 +13,20 @@ block title
 block scripts 
   script(src='../components/dropdown/dropdown.js')
 
+
 block content
   include ../components/dropdown/dropdown.pug
   .content
     .number-selection
       p Найдем номера под<br>ваши пожелания
       .arrival-departure-container
+        .air-datepicker-global-container.
         label.dropdown-calendar Прибытие
-          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
+          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ" id='arrival')
         label.dropdown-calendar Выезд
-          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
+          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ" id='departure')
       .content-max
         +dropdown('Гости','Сколько гостей','Взрослые','Дети','Младенцы','guest')
-      a(href="./numbers.html")
+      a(href="./numbers.html" target="_blank")
         button.selection Подобрать номер
     p.caption Лучшие номера для вашей работы,<br>отдыха и просто вдохновения

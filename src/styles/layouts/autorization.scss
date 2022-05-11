@@ -1,0 +1,27 @@
+.authorization {
+    background-image: url('../../img/signUp.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    max-width: 1440px;
+    height: min-content;
+    display: flex;
+    font-family: Montserrat;
+    margin: 0 auto;
+    padding-top: 172px;//Только для signIn
+    padding-bottom: 172px;//Только для signIn
+    padding-right: 530px;
+    padding-left: 530px;
+  }
+  
+  .authorization-container {
+    width: min-content;
+    height: min-content;
+    margin: 0 auto;
+    padding: 40px 30px 30px 30px;
+    background-color: white;
+    border-radius: 4px;
+    display: block;
+    align-items: center;
+    box-sizing: border-box;
+  }

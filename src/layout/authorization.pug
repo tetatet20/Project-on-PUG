@@ -3,10 +3,9 @@ html
     block title
     block styles
   body
-    .container
-      include ../components/header.pug 
-      .authorization
-        .authorization-container
-          block content
-      include ../components/footer.pug
-      block scripts
+    include ../components/header.pug 
+    .authorization
+      .authorization-container
+        block content
+    include ../components/footer.pug
+    block scripts
