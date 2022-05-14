@@ -61,9 +61,10 @@ $grey-25: rgba(31, 32, 65, .25);
     max-width: 1440px;
     max-height: 830px;
     margin: 0 auto;
-    padding-top:70px;
-    padding-left: 140px;
-    padding-bottom: 18px;
+    padding: 3% 0% 3% 9%;
+    // padding-top:70px;
+    // padding-left: 140px;
+    // padding-bottom: 18px;
 }
 
 .number-selection {
@@ -84,6 +85,10 @@ $grey-25: rgba(31, 32, 65, .25);
     font-size: 14px;
     line-height: 24px;
     color: rgba(31, 32, 65, 0.75);
+
+    @media (max-width: 1100px) {
+        margin-top: 260px;
+	}
 }
 
 .arrival-departure {
