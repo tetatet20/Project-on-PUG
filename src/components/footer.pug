@@ -5,25 +5,25 @@
             p Бронирование номеров в лучшем <br> отеле 2019 года по версии <br> ассоциации «Отельные взгляды»
         ul.navigation-footer 
             li.bold-nav-footer Навигация
-            li: a.color-monserat(href="#") О нас
-            li: a.color-monserat(href="#") Новости
-            li: a.color-monserat(href="#") Служба поддержки
-            li: a.color-monserat(href="#") Услуги
+            li: a.color-monserat.first-link(href="#" id="first") О нас
+            li: a.color-monserat.first-link(href="#" id="first") Новости
+            li: a.color-monserat.first-link(href="#" id="first") Служба поддержки
+            li: a.color-monserat.first-link(href="#" id="first") Услуги
         ul.about-us
             li.bold-nav-footer О нас
-            li: a.color-monserat(href="#") О сервисе
-            li: a.color-monserat(href="#") Наша команда
-            li: a.color-monserat(href="#") Вакансии
-            li: a.color-monserat(href="#") Инвесторы
+            li: a.color-monserat.second-link(href="#" id="second") О сервисе
+            li: a.color-monserat.second-link(href="#" id="second") Наша команда
+            li: a.color-monserat.second-link(href="#" id="second") Вакансии
+            li: a.color-monserat.second-link(href="#" id="second") Инвесторы
         ul.support-service
             li.bold-nav-footer Служба поддержки
-            li: a.color-monserat(href="#") Соглашения
-            li: a.color-monserat(href="#") Сообщества
-            li: a.color-monserat(href="#") Связь с нами
+            li: a.color-monserat.third-link(href="#" id="third") Соглашения
+            li: a.color-monserat.third-link(href="#" id="third") Сообщества
+            li: a.color-monserat.third-link(href="#" id="third") Связь с нами
         .subscription
             .bold-nav-footer-subscription Подписка
             .color-monserat: p.subscription-margin Получайте специальные<br>предложения и новости сервис
-            .subscription-margin
+            .subscription-margin.subscription-email
                 input.email(type="email" placeholder="Email" name="email")   
                 input.arrow-forward(type="image" src=" ../img/arrow_forward.svg" alt="arrow_forward")     
 .border-footer-bottom                        

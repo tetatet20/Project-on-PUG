@@ -151,12 +151,12 @@ padding-left: 5px;
     line-height: 17px;
     font-weight: 400;
     font-size: 14px;
-    @media (max-width: 990px) {
-        display: none;
-        // position: fixed;
-        // left:-100%;
-        // opacity: 0;
-      }
+    // @media (max-width: 990px) {
+    //     display: none;
+    //     // position: fixed;
+    //     // left:-100%;
+    //     // opacity: 0;
+    //   }
 }
 
 .color-monserat-p {
@@ -203,6 +203,13 @@ padding-left: 5px;
       }
 }
 
+.subscription-margin-active {
+    display: block;
+    margin-top: 5px;
+    position: relative;
+    margin-bottom: 0;
+}
+
 .arrow-forward {
     position: absolute;
     right: 20px;
@@ -230,4 +237,38 @@ margin-right: 20px;
 
 .footer-bottom p {
     margin:26px 0;
+}
+
+
+.first-link {
+     @media (max-width: 990px) {
+        display: none;
+        // position: fixed;
+        // left:-100%;
+        // opacity: 0;
+      }
+}
+
+.second-link {
+    @media (max-width: 990px) {
+        display: none;
+        // position: fixed;
+        // left:-100%;
+        // opacity: 0;
+      }
+}
+
+.third-link {
+    @media (max-width: 990px) {
+        display: none;
+        // position: fixed;
+        // left:-100%;
+        // opacity: 0;
+      }
+}
+
+.link-active {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
