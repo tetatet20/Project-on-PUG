@@ -88,8 +88,13 @@ $grey-25: rgba(31, 32, 65, .25);
 
     @media (max-width: 990px) {
        margin: 10px 0 0 0;
-
 	}
+
+    @media (max-width: 600px) {
+        padding: 15px;
+        max-width: 350px;
+ 
+     }
 }
 
 .caption {

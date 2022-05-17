@@ -85,6 +85,9 @@
 .logo-footer {
 padding-left: 0px;
 flex-shrink: 0;
+@media (max-width: 990px) {
+    margin-bottom: 5px;
+   }
 }
 
 .logo-footer img {
