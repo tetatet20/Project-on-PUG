@@ -68,6 +68,11 @@ li {
     position: relative;
     margin-right: 40px;
 
+    @media (max-width: 990px) {
+      margin-right: 0px;
+
+  }  
+
     &::after {
         position: absolute;
         content: "";
@@ -184,18 +189,19 @@ li {
 .navigation-active {
     position: fixed;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin-left: 100%;
     margin-top: -35px;
     width: 100%;
-    height: 70px;
+    height: 100%;
     box-sizing: border-box;
     background-color: white;
     z-index: 10;
     align-items: center;
-    // padding-left: 50px;
+    text-align: center;
+    padding: 20px;
     opacity: 1;
     border: 3px solid #BC9CFF;
     border-radius: 10px;
@@ -205,9 +211,9 @@ li {
 // 15px -15px 2px -5px #bc9cff,
 // 15px 15px 2px -5px #bc9cff;
 
-  // li {
-  //   margin-bottom: 25px;
-  // }
+  li {
+    margin-bottom: 25px;
+  }
 
     a {
       color: black;

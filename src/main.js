@@ -65,3 +65,11 @@ linkPassiveThird.forEach(function (third) {
 menuLinkFourth.addEventListener("click", function () {
   linkPassiveFourth.classList.toggle("subscription-margin-active");
 });
+
+const moreСomfort = document.querySelector(".more-comfort");
+const dropdownСheckbox = document.querySelector(".dropdown-checkbox");
+
+moreСomfort.addEventListener("click", (e) => {
+  if (e.target.classList[0] === "selection") return;
+  dropdownСheckbox.classList.toggle("dropdown-checkbox-show");
+});
