@@ -109,6 +109,10 @@ li {
     line-height: 15px;
     cursor: pointer;
     text-transform: uppercase;
+
+      @media (max-width: 600px) {
+        margin-bottom: 20px;
+  }
 }
 
 .register {
@@ -193,7 +197,7 @@ li {
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-left: 100%;
-    margin-top: -35px;
+    margin-top: -18px;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -211,6 +215,11 @@ li {
 // 15px -15px 2px -5px #bc9cff,
 // 15px 15px 2px -5px #bc9cff;
 
+  
+@media (max-width: 600px) {
+  margin-top: -35px;
+}  
+
   li {
     margin-bottom: 25px;
   }
@@ -221,4 +230,14 @@ li {
       font-weight: 500;
       font-size: 16px;
     }
+}
+
+.buttons-active {
+    display: none;
+
+    @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
