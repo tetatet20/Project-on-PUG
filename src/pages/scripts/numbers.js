@@ -7,6 +7,9 @@
 //   dropdownComfort.classList.toggle("dropdown-menu-comfort-show");
 // });
 
+import "../../components/checkbox/checkbox.js";
+import "../../components/dropdown/dropdown.js";
+
 //Сделал выпадающий список чекбоксов
 
 const moreСomfort = document.querySelector(".more-comfort");

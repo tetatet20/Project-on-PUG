@@ -1,4 +1,5 @@
 import AirDatepicker from "air-datepicker";
+import "../../components/dropdown/dropdown.js";
 
 let button = {
   content: " Применить",

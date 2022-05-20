@@ -8,13 +8,13 @@
 // });
 
 //Сделал выпадающий список чекбоксов
-const moreСomfort = document.querySelector(".more-comfort");
-const dropdownСheckbox = document.querySelector(".dropdown-checkbox");
+// const moreСomfort = document.querySelector(".more-comfort");
+// const dropdownСheckbox = document.querySelector(".dropdown-checkbox");
 
-moreСomfort.addEventListener("click", (e) => {
-  if (e.target.classList[0] === "selection") return;
-  dropdownСheckbox.classList.toggle("dropdown-checkbox-show");
-});
+// moreСomfort.addEventListener("click", (e) => {
+//   if (e.target.classList[0] === "selection") return;
+//   dropdownСheckbox.classList.toggle("dropdown-checkbox-show");
+// });
 
 // // // Объявляем всякие кнопки, менюшки инпуты
 // const dateGuests = document.querySelector(".roma");
