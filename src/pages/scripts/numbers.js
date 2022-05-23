@@ -10,6 +10,16 @@
 import "../../components/checkbox/checkbox.js";
 import "../../components/dropdown/dropdown.js";
 
+const burgerNumbers = document.querySelector(".container-burger-numbers");
+const passiveNumbers = document.querySelector(".button-menu");
+const selectionNumbers = document.querySelector(".selection-numbers");
+
+burgerNumbers.addEventListener("click", function () {
+  passiveNumbers.classList.toggle("button-menu-active");
+  burgerNumbers.classList.toggle("change-numbers");
+  selectionNumbers.classList.toggle("selection-numbers-none");
+});
+
 //Сделал выпадающий список чекбоксов
 
 const moreСomfort = document.querySelector(".more-comfort");

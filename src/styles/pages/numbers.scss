@@ -52,14 +52,28 @@ h2,h3{
 
 .conteiner {
     display: flex;
+    position: relative;
     // justify-content: space-around;
     max-width: 1440px;
-    padding: 20px;
+    // padding: 20px;
     margin: 0 auto;
-    // padding: 30px 140px 70px;
+    padding: 30px 120px 70px;
     box-sizing: border-box;
     font-family: Montserrat;
     background-color:white; 
+
+    @media (max-width: 1400px) {
+        padding: 20 70px 70px 70px;
+     }
+
+     @media (max-width: 1050px) {
+        padding: 20px
+     }
+
+     @media (max-width: 500px) {
+        padding: 10px
+     }
+
 }
 
 .button-menu {
@@ -68,19 +82,34 @@ h2,h3{
     margin-right: 60px;
     color:$grey-50;
 
-    @media (max-width: 900px) {
+    @media (max-width: 990px) {
         display: none;
      }
 }
 
+.button-menu-active {
+    display: block;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    margin-left: 40px;
+    color:$grey-50;
+    margin-top: 80px;
+
+}
+
+
 .card-numbers {
-    display: grid;
-    grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
-    // display: flex;
-    // flex-wrap: wrap;
-    // box-sizing: border-box;
-    // width: 1000px;
-    // justify-content: space-between;
+    // display: grid;
+    // grid-template-columns: repeat( auto-fill, minmax(250px, 1fr) );
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    justify-content: center;
+
+    @media (max-width: 900px) {
+      justify-content: center;
+     }
 }
 
 .date-guests {
@@ -386,9 +415,14 @@ max-width: 50px;
 }
 
 .h2 {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    @media (max-width: 900px) {
+        text-align: center;
+     }
 }
  
 .content-min {
@@ -479,3 +513,71 @@ text-align: center;
 }
 
 
+.container-burger-numbers {
+    display: none;
+}
+
+@media (max-width: 990px) {
+.container-burger-numbers {
+    position: absolute;
+    top:20px;
+    left: 40px;
+  display: inline-block;
+  cursor: pointer;
+//   top: 50%;
+//   left: 50%;
+  z-index: 2;
+  margin-right: 30px;
+
+  @media (max-width: 890px) {
+    top:20px;
+    left: 20px;
+}  
+
+@media (max-width: 660px) {
+    top:65px;
+    left: 10px;
+}  
+
+@media (max-width: 500px) {
+    left: 10px;
+    top:50px;
+}  
+}
+
+.bar1-numbers, .bar2-numbers, .bar3-numbers {
+  width: 30px;
+  height: 2px;
+  background-color: #BC9CFF;
+  margin: 6px 0;
+  transition: 0.4s;
+
+  @media (max-width: 500px) {
+      width: 25px;
+      height: 2px;
+
+  }  
+}
+
+/* Rotate first bar */
+.change-numbers .bar1-numbers {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-6px, 5px) ;
+}
+
+/* Fade out the second bar */
+.change-numbers .bar2-numbers {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change-numbers .bar3-numbers {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-6px, -6px) ;
+}
+}
+
+
+.selection-numbers-none {
+    display: none;
+}

@@ -6,13 +6,14 @@ burger.addEventListener("click", function () {
   burger.classList.toggle("change");
 });
 
-const border = document.querySelectorAll(".border");
+//Забыл для чего этот скрипт
+// const border = document.querySelectorAll(".border");
 
-border.forEach(function (border) {
-  burger.addEventListener("click", function () {
-    border.classList.remove("border");
-  });
-});
+// border.forEach(function (border) {
+//   burger.addEventListener("click", function () {
+//     border.classList.remove("border");
+//   });
+// });
 
 const link = document.querySelectorAll(".class-link");
 
