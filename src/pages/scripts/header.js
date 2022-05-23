@@ -1,12 +1,14 @@
 const burger = document.querySelector(".container-burger");
 const passive = document.querySelector(".navigation");
+const buttonsActive = document.querySelector(".buttons-active");
 
 burger.addEventListener("click", function () {
   passive.classList.toggle("navigation-active");
   burger.classList.toggle("change");
+  buttonsActive.classList.toggle("buttons-active-active");
 });
 
-//Забыл для чего этот скрипт
+// // Забыл для чего этот скрипт
 // const border = document.querySelectorAll(".border");
 
 // border.forEach(function (border) {

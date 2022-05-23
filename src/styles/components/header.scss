@@ -110,9 +110,9 @@ li {
     cursor: pointer;
     text-transform: uppercase;
 
-      @media (max-width: 600px) {
-        margin-bottom: 20px;
-  }
+  //     @media (max-width: 600px) {
+  //       margin-bottom: 20px;
+  // }
 }
 
 .register {
@@ -235,9 +235,18 @@ li {
 .buttons-active {
     display: none;
 
-    @media (max-width: 600px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  //   @media (max-width: 600px) {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  // }
+}
+
+.buttons-active-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  a {
+    margin-bottom: 20px;
   }
 }

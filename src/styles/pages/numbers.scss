@@ -127,6 +127,8 @@ h2,h3{
 }
 
 .arrow-date-guests {
+    display: flex;
+    flex-direction: column;
     position: relative;
     margin-top: 30px;
         &::after {
@@ -209,7 +211,7 @@ h2,h3{
     &::after {
         @include arrow();
 
-        right: 15px;
+        left: 243px;
         top: 2px;
     }
 }
@@ -407,7 +409,7 @@ max-width: 50px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .filtres_price_label {
