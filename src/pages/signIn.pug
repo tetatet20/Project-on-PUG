@@ -1,28 +1,30 @@
-extends ../layout/authorization.pug
+//- extends ./layout/authorization.pug
 
 block title
   title  Авторизация
+  meta(name="viewport" content="width=device-width, initial-scale=1")
 
 //- block styles
-//-     style
-//-       include ../styles/pages/dist/signUp.css
-//-       include ../styles/pages/dist/signIn.css
-
-block scripts 
-  //- script(src='../scripts/signUp.js')
+//-   style
+//-     include ../styles/pages/dist/signUp.scss
+//-     include ../styles/pages/dist/signIn.scss
 
 
 block content
-  p.header-register Войти
-  .email-password 
-    label.header-label
-      input.account-registration-input(type="text" placeholder="Email" autocomplete="on" name="email") 
-      input.account-registration-input(type="password" placeholder="Пароль" autocomplete="on") 
-  .register-container
-    a(href="#")
-      button.register-button Войти
-  .come-in
-    .account-available Нет аккаунта на Toxin?
-    .come-in-container
-      a(href="#")
-        button.to-come-in-button Создать
+  include ../components/header.pug 
+  .authorization
+    .authorization-container 
+      p.header-register Войти
+      .email-password 
+        label.header-label
+          input.account-registration-input(type="text" placeholder="Email" autocomplete="on" name="email") 
+          input.account-registration-input(type="password" placeholder="Пароль" autocomplete="on") 
+      .register-container
+        a(href="#")
+          button.register-button Войти
+      .come-in
+        .account-available Нет аккаунта на Toxin?
+        .come-in-container
+          a(href="#")
+            button.to-come-in-button Создать
+  include ../components/footer.pug
