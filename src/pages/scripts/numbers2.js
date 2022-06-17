@@ -8,13 +8,13 @@
 // });
 
 //Сделал выпадающий список чекбоксов
-const moreСomfort = document.querySelector(".more-comfort");
-const dropdownСheckbox = document.querySelector(".dropdown-checkbox");
+// const moreСomfort = document.querySelector(".more-comfort");
+// const dropdownСheckbox = document.querySelector(".dropdown-checkbox");
 
-moreСomfort.addEventListener("click", (e) => {
-  if (e.target.classList[0] === "selection") return;
-  dropdownСheckbox.classList.toggle("dropdown-checkbox-show");
-});
+// moreСomfort.addEventListener("click", (e) => {
+//   if (e.target.classList[0] === "selection") return;
+//   dropdownСheckbox.classList.toggle("dropdown-checkbox-show");
+// });
 
 // // // Объявляем всякие кнопки, менюшки инпуты
 // const dateGuests = document.querySelector(".roma");
@@ -107,12 +107,12 @@ moreСomfort.addEventListener("click", (e) => {
 //   else {
 //     dateGuests.value = bedroom + " спален";
 //   }
-  
+
 //   if(bed == 1) {
 //     dateGuests.value = dateGuests.value + ', ' + bed + " кровать";
 //   }  else if ((bed > 1) & (bed < 5)) {
 //     dateGuests.value = dateGuests.value + ', ' + bed + " кровати";
-//   } 
+//   }
 //  else {
 //     dateGuests.value = dateGuests.value + ', ' + bed + " кроватей";
 //   }
@@ -120,29 +120,28 @@ moreСomfort.addEventListener("click", (e) => {
 //   if (bathrooms) {
 //     if (bathrooms == 1) {
 //         dateGuests.value = dateGuests.value + ', ' + bathrooms + ' ванна'
-//     } 
+//     }
 //     else if ((bathrooms > 1) & (bathrooms < 5)) {
 //       dateGuests.value = dateGuests.value + ', ' + bathrooms + " ванны";
-//     } 
+//     }
 //     else {
 //         dateGuests.value = dateGuests.value + ', ' + bathrooms + ' ванн'
 //     }
 //     }
 //   }
 
+//Сложные чекбоксы
+// const checkbox3 = document.querySelector('#checkbox_3');
+// checkbox3.addEventListener("click", () => {
+//   checkbox3.classList.toggle("checkbox-active");
+//   })
 
-  //Сложные чекбоксы
-  // const checkbox3 = document.querySelector('#checkbox_3');
-  // checkbox3.addEventListener("click", () => {
-  //   checkbox3.classList.toggle("checkbox-active");
-  //   })
+// const checkbox4 = document.querySelector('#checkbox_4');
+// checkbox4.addEventListener("click", () => {
+// checkbox4.classList.toggle("checkbox-active");
+// })
 
-  // const checkbox4 = document.querySelector('#checkbox_4');
-  // checkbox4.addEventListener("click", () => {
-  // checkbox4.classList.toggle("checkbox-active");
-  // })
-
-  // const checkbox5 = document.querySelector('#checkbox_5');
-  // checkbox5.addEventListener("click", () => {
-  // checkbox5.classList.toggle("checkbox-active");
-  // })
+// const checkbox5 = document.querySelector('#checkbox_5');
+// checkbox5.addEventListener("click", () => {
+// checkbox5.classList.toggle("checkbox-active");
+// })

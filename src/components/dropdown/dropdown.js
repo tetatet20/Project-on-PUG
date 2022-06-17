@@ -1,7 +1,5 @@
 const labels = document.querySelectorAll(".guests");
 
-
-
 labels.forEach(function (label) {
   const input = label.querySelector(".guests-input");
   const firstСounter = label.querySelector(".adults-number");
@@ -90,14 +88,14 @@ labels.forEach(function (label) {
     let firstText =
       first === 1 ? "спальня" : first > 1 && first < 5 ? "спальни" : "спален";
 
-      // тоже самое что и выше
-      // if (first === 1) {
-      //   firstText = 'спальня'
-      // } else if (first > 1 && first < 5) {
-      //   firstText = 'спальни'
-      // } else {
-      //   firstText = 'спален'
-      // }
+    // тоже самое что и выше
+    // if (first === 1) {
+    //   firstText = 'спальня'
+    // } else if (first > 1 && first < 5) {
+    //   firstText = 'спальни'
+    // } else {
+    //   firstText = 'спален'
+    // }
 
     const secondText =
       second === 1
@@ -128,11 +126,7 @@ labels.forEach(function (label) {
     } else {
       input.value = bedsString();
 
-
-
-
-
-      // это говнокод романа огромный 
+      // это говнокод романа огромный
       // if (first == 1) {
       //   input.value = bedsString("спальня", "кровать", "");
       // } else if ((first > 1) & (first < 5)) {

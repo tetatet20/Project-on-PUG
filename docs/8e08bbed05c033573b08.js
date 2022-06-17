@@ -1,0 +1,1 @@
+const containerRadio=document.querySelector(".container-radio"),radio=document.querySelector(".radio");containerRadio.addEventListener("click",(o=>{"selection"!==o.target.classList[0]&&radio.classList.toggle("radio-active")})),console.log(radio);

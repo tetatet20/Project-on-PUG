@@ -7,10 +7,9 @@ block title
 //-     style
 //-       include ../styles/pages/dist/numbers.css
 
-block scripts 
-    script(src='./scripts/numbers.js')
-    script(src="../components/checkbox/checkbox.js")
-    script(src='../components/dropdown/dropdown.js')
+//- block scripts 
+//-     script(src='./scripts/numbers.js')
+
 
 block content
     include ../components/checkbox/checkbox.pug
@@ -70,9 +69,9 @@ block content
                 +card('../img/img12.png', '352', false, '5000', 3, '55')
             .page-selection
                 nav.page-number
-                    a(href="./numbers.html")
+                    a(href="./numbers.html" target="_blank")
                         button.current-element 1
-                    a(href="./numbers2.html") 
+                    a(href="./numbers2.html" target="_blank") 
                         button.current-element 2
                     button.current-element 3
                     //- a(href="")  3
@@ -84,4 +83,8 @@ block content
                         a(href="") 
 
                 .number-options 1 – 12 из 100+ вариантов аренды
+        .container-burger-numbers 
+            .bar1-numbers 
+            .bar2-numbers 
+            .bar3-numbers
 

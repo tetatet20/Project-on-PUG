@@ -3,15 +3,14 @@ extends ../layout/default.pug
 block title
   title Главная страница
 
-//- block meta
-//- meta(name="viewport" content="width=1440")
-
 //- block styles
 //-   style
 //-     //- include ./index.scss
 
 block scripts 
-  script(src='../components/dropdown/dropdown.js')
+  script(src='./scripts/index')
+
+
 
 block content
   include ../components/dropdown/dropdown.pug
@@ -19,12 +18,13 @@ block content
     .number-selection
       p Найдем номера под<br>ваши пожелания
       .arrival-departure-container
+        .air-datepicker-global-container.
         label.dropdown-calendar Прибытие
-          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
+          input.arrival-departure(type="text" readonly placeholder="ДД.ММ.ГГГГ" id='arrival')
         label.dropdown-calendar Выезд
-          input.arrival-departure(type="text" placeholder="ДД.ММ.ГГГГ")
+          input.arrival-departure(type="text" readonly placeholder="ДД.ММ.ГГГГ" id='departure')
       .content-max
         +dropdown('Гости','Сколько гостей','Взрослые','Дети','Младенцы','guest')
-      a(href="./numbers.html")
+      a(href="./numbers.html" target="_blank")
         button.selection Подобрать номер
     p.caption Лучшие номера для вашей работы,<br>отдыха и просто вдохновения
